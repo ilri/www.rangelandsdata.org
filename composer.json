@@ -91,6 +91,19 @@
                     "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dropzone/dropzone",
+                "version": "5.9",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/dropzone/dropzone.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     ],
     "require": {
@@ -101,7 +114,7 @@
         "ckeditor-plugin/uploadwidget": "^4.8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
-        "enyo/dropzone": "^5.9",
+        "dropzone/dropzone": "^5.9",
         "drupal/admin_toolbar": "^3.0",
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/adminimal_theme": "^1.6",

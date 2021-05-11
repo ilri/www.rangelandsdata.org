@@ -1,0 +1,33 @@
+uuid: e2348c85-8d90-4782-a0ac-2cf1e9d0b8ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.maps.field_media_image
+    - image.style.large
+    - media.type.maps
+  module:
+    - svg_image
+id: media.maps.default
+targetEntityType: media
+bundle: maps
+mode: default
+content:
+  field_media_image:
+    label: visually_hidden
+    weight: 0
+    settings:
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
