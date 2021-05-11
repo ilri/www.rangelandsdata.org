@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3c8c9eedfaab10ce625a92b96e82f65",
+    "content-hash": "194daaa0312bb1801219a14cc0b25bbb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2130,6 +2130,16 @@
             },
             "abandoned": "roave/better-reflection",
             "time": "2020-10-27T21:46:55+00:00"
+        },
+        {
+            "name": "dropzone/dropzone",
+            "version": "5.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dropzone/dropzone.git",
+                "reference": "master"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "drupal/admin_toolbar",
@@ -7168,46 +7178,6 @@
                 "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.14.0"
             },
             "time": "2021-01-21T10:13:20+00:00"
-        },
-        {
-            "name": "enyo/dropzone",
-            "version": "v5.9.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dropzone/dropzone-packagist.git",
-                "reference": "58574133fea351fc0b2d7461c6bf2431607c3a9a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dropzone/dropzone-packagist/zipball/58574133fea351fc0b2d7461c6bf2431607c3a9a",
-                "reference": "58574133fea351fc0b2d7461c6bf2431607c3a9a",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Matias Meno",
-                    "email": "m@tias.me",
-                    "homepage": "http://www.yesmeno.com"
-                }
-            ],
-            "description": "Handles drag and drop of files for you.",
-            "homepage": "http://www.dropzonejs.com",
-            "keywords": [
-                "drag and drop",
-                "dragndrop",
-                "file upload",
-                "upload"
-            ],
-            "support": {
-                "issues": "https://github.com/dropzone/dropzone-packagist/issues",
-                "source": "https://github.com/dropzone/dropzone-packagist/tree/v5.9.2"
-            },
-            "time": "2021-04-02T14:29:45+00:00"
         },
         {
             "name": "grasmash/expander",

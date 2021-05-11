@@ -1,0 +1,14 @@
+uuid: afcef3a7-f1f5-44ec-9df8-984c812db326
+langcode: en
+status: true
+dependencies: {  }
+id: legends
+label: Legends
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

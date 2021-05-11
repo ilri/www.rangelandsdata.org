@@ -1,0 +1,29 @@
+uuid: 5a603203-9367-4dc1-98f1-73155dd966b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legend
+    - media.type.legends
+    - node.type.map
+id: node.map.field_legend
+field_name: field_legend
+entity_type: node
+bundle: map
+label: Legend
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      legends: legends
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
