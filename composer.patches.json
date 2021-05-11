@@ -1,0 +1,21 @@
+{
+  "patches": {
+    "drupal/core": {
+      "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2021-02-23/2985168-58.patch",
+      "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
+      "Allow edit Media items from Media Library modal dialog in CKEditor": "https://www.drupal.org/files/issues/2021-01-04/3168868-9.patch"
+    },
+    "drupal/jquery_ui_touch_punch": {
+      "#3159222:jQuery UI Touch Punch library": "https://www.drupal.org/files/issues/2021-02-26/jquery_ui_touch_punch.patch"
+    },
+    "drupal/structure_sync": {
+      "#3180878: getVocabularyId (undefined method)": "https://www.drupal.org/files/issues/2020-11-05/3180878-undefined-method-getVocabularyId-1.patch"
+    },
+    "drupal/simple_sitemap": {
+      "Exclude duplicate Links should keep the highest priority entry": "https://www.drupal.org/files/issues/2020-06-20/3022731_8_merge_duplicates_to_highest_priority.patch"
+    },
+    "drupal/dropzonejs": {
+      "Make dropzonejs widget available to the new Media Library in core": "https://www.drupal.org/files/issues/2021-03-18/3051658-27.patch"
+    }
+  }
+}

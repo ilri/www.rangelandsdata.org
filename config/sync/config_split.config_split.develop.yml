@@ -1,0 +1,17 @@
+uuid: 297b7a0d-745e-4491-b35e-c03d16d0005a
+langcode: en
+status: false
+dependencies: {  }
+id: develop
+label: develop
+description: ''
+folder: ../config/develop
+module:
+  devel: 0
+  devel_php: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,9 @@
+uuid: 34325dc7-a8d8-4d9d-a046-e0d5d058b2fe
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: dev
+type: Directory
+config:
+  directory: 'private://backup_migrate/dev'
