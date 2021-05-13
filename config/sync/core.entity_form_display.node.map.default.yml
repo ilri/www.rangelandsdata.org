@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.map.field_legend
-    - field.field.node.map.field_map
+    - field.field.node.map.field_header_image
+    - field.field.node.map.field_maps
     - field.field.node.map.field_related_content
     - node.type.map
   module:
     - media_library
+    - paragraphs
+    - paragraphs_features
     - path
 id: node.map.default
 targetEntityType: node
@@ -21,19 +23,36 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_legend:
-    type: media_library_widget
-    weight: 2
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-    region: content
-  field_map:
-    type: media_library_widget
+  field_header_image:
     weight: 1
     settings:
       media_types: {  }
     third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_maps:
+    type: paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        delete_confirmation: true
+        show_drag_and_drop: true
+        add_in_between: false
+        split_text: false
     region: content
   field_related_content:
     weight: 3
@@ -89,5 +108,10 @@ content:
       placeholder: ''
       match_limit: 10
     region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

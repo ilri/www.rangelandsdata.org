@@ -3,11 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.map.field_legend
-    - field.field.node.map.field_map
+    - field.field.node.map.field_header_image
+    - field.field.node.map.field_maps
     - field.field.node.map.field_related_content
     - node.type.map
   module:
+    - entity_reference_revisions
     - media
     - user
 id: node.map.default
@@ -15,26 +16,26 @@ targetEntityType: node
 bundle: map
 mode: default
 content:
-  field_legend:
-    type: media_thumbnail
-    weight: 102
+  field_header_image:
+    weight: 0
     label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
-    region: content
-  field_map:
     type: media_thumbnail
-    weight: 101
+    region: content
+  field_maps:
+    type: entity_reference_revisions_entity_view
+    weight: 1
     label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
   field_related_content:
-    weight: 103
+    weight: 2
     label: hidden
     settings:
       view_mode: teaser
@@ -42,9 +43,5 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true
