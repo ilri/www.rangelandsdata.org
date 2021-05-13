@@ -1,14 +1,14 @@
-uuid: 49dcee40-c1b9-43fe-a560-34c29e1fca77
+uuid: 6cf7861d-7615-4b6a-92ed-cf6111b39718
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_map
+    - field.storage.paragraph.field_map
     - media.type.maps
-    - node.type.map
-id: node.map.field_map
+    - paragraphs.paragraphs_type.map
+id: paragraph.map.field_map
 field_name: field_map
-entity_type: node
+entity_type: paragraph
 bundle: map
 label: Map
 description: ''

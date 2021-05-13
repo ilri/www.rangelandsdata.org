@@ -1,0 +1,31 @@
+uuid: b0211e98-cd17-492d-a894-f211db524ade
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maps
+    - node.type.map
+    - paragraphs.paragraphs_type.map
+  module:
+    - entity_reference_revisions
+id: node.map.field_maps
+field_name: field_maps
+entity_type: node
+bundle: map
+label: Maps
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      map: map
+    target_bundles_drag_drop:
+      map:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

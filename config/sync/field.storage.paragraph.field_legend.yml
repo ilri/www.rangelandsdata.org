@@ -1,13 +1,13 @@
-uuid: f23fa962-6696-4d9b-ac96-74eeba66210a
+uuid: d7f6e350-6e78-4cc7-8120-c7d1f05e6b5b
 langcode: en
 status: true
 dependencies:
   module:
     - media
-    - node
-id: node.field_map
-field_name: field_map
-entity_type: node
+    - paragraphs
+id: paragraph.field_legend
+field_name: field_legend
+entity_type: paragraph
 type: entity_reference
 settings:
   target_type: media

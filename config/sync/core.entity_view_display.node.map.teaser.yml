@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.map.field_legend
-    - field.field.node.map.field_map
+    - field.field.node.map.field_header_image
+    - field.field.node.map.field_maps
     - field.field.node.map.field_related_content
     - node.type.map
   module:
@@ -16,7 +16,7 @@ targetEntityType: node
 bundle: map
 mode: teaser
 content:
-  field_map:
+  field_header_image:
     type: media_thumbnail
     weight: 0
     region: content
@@ -26,6 +26,6 @@ content:
       image_link: ''
     third_party_settings: {  }
 hidden:
-  field_legend: true
+  field_maps: true
   field_related_content: true
   links: true

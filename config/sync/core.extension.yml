@@ -25,6 +25,7 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -35,6 +36,8 @@ module:
   history: 0
   image: 0
   image_widget_crop: 0
+  layout_discovery: 0
+  layout_paragraphs: 0
   link: 0
   media: 0
   media_library: 0
@@ -44,6 +47,8 @@ module:
   options: 0
   override_node_options: 0
   page_cache: 0
+  paragraphs_edit: 0
+  paragraphs_features: 0
   path: 0
   path_alias: 0
   quickedit: 0
@@ -66,6 +71,7 @@ module:
   views_ui: 0
   pathauto: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   bartik: 0

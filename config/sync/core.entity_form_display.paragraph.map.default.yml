@@ -1,0 +1,32 @@
+uuid: 7b7c8101-9ac5-4e40-b551-9523c81b2187
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_legend
+    - field.field.paragraph.map.field_map
+    - paragraphs.paragraphs_type.map
+  module:
+    - media_library
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_legend:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_map:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
