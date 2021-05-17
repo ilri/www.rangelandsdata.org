@@ -5,6 +5,7 @@ function rangelands_theme_suggestions_block_alter(array &$suggestions, array $va
   $element = $variables["elements"];
   $uuid = $element["#derivative_plugin_id"];
   if($uuid && $block = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid)){
+
     $suggestions[] = 'block__type_' . $block->bundle();
     $suggestions[] = 'block__type_' . $block->bundle() . '__' . $block->id();
   }
