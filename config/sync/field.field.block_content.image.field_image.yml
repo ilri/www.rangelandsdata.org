@@ -1,0 +1,36 @@
+uuid: afe61f00-e4f4-49a8-824a-fa90bae71d5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image
+    - field.storage.block_content.field_image
+    - media.type.image
+    - media.type.svg
+  module:
+    - composite_reference
+third_party_settings:
+  composite_reference:
+    composite: false
+id: block_content.image.field_image
+field_name: field_image
+entity_type: block_content
+bundle: image
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      svg: svg
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

@@ -1,0 +1,76 @@
+uuid: 1e316e56-6f6b-45db-8a87-0f743756e3eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraphs_block
+    - field.storage.block_content.field_body
+    - paragraphs.paragraphs_type.pzt_downloads
+    - paragraphs.paragraphs_type.pzt_picture
+    - paragraphs.paragraphs_type.pzt_picture_gallery
+    - paragraphs.paragraphs_type.pzt_text_block
+    - paragraphs.paragraphs_type.pzt_video
+  module:
+    - composite_reference
+    - entity_reference_revisions
+third_party_settings:
+  composite_reference:
+    composite: false
+id: block_content.paragraphs_block.field_body
+field_name: field_body
+entity_type: block_content
+bundle: paragraphs_block
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      pzt_downloads: pzt_downloads
+      pzt_picture: pzt_picture
+      pzt_picture_gallery: pzt_picture_gallery
+      pzt_text_block: pzt_text_block
+      pzt_video: pzt_video
+    target_bundles_drag_drop:
+      feature:
+        weight: 13
+        enabled: false
+      map:
+        weight: 14
+        enabled: false
+      pzt_articles:
+        weight: 15
+        enabled: false
+      pzt_downloads:
+        enabled: true
+        weight: 16
+      pzt_features:
+        weight: 17
+        enabled: false
+      pzt_landing_page_header:
+        weight: 18
+        enabled: false
+      pzt_layout:
+        weight: 19
+        enabled: false
+      pzt_picture:
+        enabled: true
+        weight: 20
+      pzt_picture_gallery:
+        enabled: true
+        weight: 21
+      pzt_terms:
+        weight: 22
+        enabled: false
+      pzt_text_block:
+        enabled: true
+        weight: 23
+      pzt_video:
+        enabled: true
+        weight: 24
+field_type: entity_reference_revisions
