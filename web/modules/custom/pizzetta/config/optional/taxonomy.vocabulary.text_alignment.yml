@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Text alignment'
+vid: text_alignment
+description: ''
+weight: 4

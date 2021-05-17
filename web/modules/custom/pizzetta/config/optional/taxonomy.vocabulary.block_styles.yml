@@ -1,0 +1,7 @@
+langcode: zxx
+status: true
+dependencies: {  }
+name: 'Block styles'
+vid: block_styles
+description: ''
+weight: 0

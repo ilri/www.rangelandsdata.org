@@ -1,0 +1,22 @@
+uuid: 97bc2579-03b3-4d28-b734-4691f48a27d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: bdhPy1XtsCGe5IM9sFn8qGiSlspCnRhrSFjZsHQ2yAc
+id: paragraph.field_text_alignment
+field_name: field_text_alignment
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

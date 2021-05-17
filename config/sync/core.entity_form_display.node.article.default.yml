@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.field_body
     - field.field.node.article.field_header_image
     - node.type.article
   module:
+    - layout_paragraphs
     - media_library
     - path
 _core:
@@ -21,6 +23,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_body:
+    type: layout_paragraphs
+    weight: 2
+    settings:
+      preview_view_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+    third_party_settings: {  }
+    region: content
   field_header_image:
     type: media_library_widget
     weight: 1

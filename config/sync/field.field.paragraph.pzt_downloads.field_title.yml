@@ -1,0 +1,21 @@
+uuid: 714c7d9b-132e-406a-8145-a74b12944324
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.pzt_downloads
+_core:
+  default_config_hash: X91ERnI3I54a6GXey0llswlwAzgKn1l4PbEeyafCIB4
+id: paragraph.pzt_downloads.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: pzt_downloads
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

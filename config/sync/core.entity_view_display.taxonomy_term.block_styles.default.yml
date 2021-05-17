@@ -1,0 +1,28 @@
+uuid: 71b54ddf-9b87-4869-b69d-adb605ccedf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.block_styles.field_css_class
+    - field.field.taxonomy_term.block_styles.field_icon
+    - taxonomy.vocabulary.block_styles
+  module:
+    - text
+_core:
+  default_config_hash: 3z84JqeNq4coUISZbBrd2yDjkGK_qCdQwgbzQVwq1hk
+id: taxonomy_term.block_styles.default
+targetEntityType: taxonomy_term
+bundle: block_styles
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_css_class: true
+  field_icon: true
+  search_api_excerpt: true

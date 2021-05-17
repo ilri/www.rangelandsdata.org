@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.field_body
     - field.field.node.article.field_header_image
     - node.type.article
   module:
+    - layout_paragraphs
     - media
     - user
 _core:
@@ -15,6 +17,15 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
+  field_body:
+    type: layout_paragraphs
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_header_image:
     type: media_thumbnail
     weight: 0

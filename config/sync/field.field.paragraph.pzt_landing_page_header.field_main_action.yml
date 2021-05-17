@@ -1,0 +1,25 @@
+uuid: dbc25983-f518-4e95-ab36-5c7d86a90157
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_action
+    - paragraphs.paragraphs_type.pzt_landing_page_header
+  module:
+    - link
+_core:
+  default_config_hash: GaAAx-_eQ57noKXLtL3ENeq_DbKstROXPJq37Yf6T2w
+id: paragraph.pzt_landing_page_header.field_main_action
+field_name: field_main_action
+entity_type: paragraph
+bundle: pzt_landing_page_header
+label: 'Main action'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

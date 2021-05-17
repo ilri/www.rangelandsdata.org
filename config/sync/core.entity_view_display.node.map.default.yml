@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.map.field_body
     - field.field.node.map.field_header_image
     - field.field.node.map.field_maps
     - field.field.node.map.field_related_content
     - node.type.map
   module:
     - entity_reference_revisions
+    - layout_paragraphs
     - media
     - user
 id: node.map.default
@@ -16,6 +18,15 @@ targetEntityType: node
 bundle: map
 mode: default
 content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: layout_paragraphs
+    region: content
   field_header_image:
     weight: 0
     label: hidden
@@ -35,7 +46,7 @@ content:
     third_party_settings: {  }
     region: content
   field_related_content:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: teaser

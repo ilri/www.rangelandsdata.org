@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pizzetta_settings
+    - paragraphs.paragraphs_type.pzt_text_block
+  module:
+    - pizzetta
+id: paragraph.pzt_text_block.field_pizzetta_settings
+field_name: field_pizzetta_settings
+entity_type: paragraph
+bundle: pzt_text_block
+label: Settings
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_value_input__field_pizzetta_settings__0__pizzetta_settings__active_tab: edit-default-value-input-field-pizzetta-settings-0-pizzetta-settings-title-settings
+    title: ''
+    hide_title: 0
+    title_level: h2
+    show_title_in_side_menu: 0
+default_value_callback: ''
+settings: {  }
+field_type: pizzetta_settings

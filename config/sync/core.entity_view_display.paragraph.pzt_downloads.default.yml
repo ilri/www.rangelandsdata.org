@@ -1,0 +1,37 @@
+uuid: 60d90259-8e46-47a1-a134-c43919ee14fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_downloads.field_downloads
+    - field.field.paragraph.pzt_downloads.field_pizzetta_settings
+    - field.field.paragraph.pzt_downloads.field_title
+    - paragraphs.paragraphs_type.pzt_downloads
+  module:
+    - pizzetta
+_core:
+  default_config_hash: pGOd1b2qVC_B4NmoZV4J8T4IjjiZUvNYBnk2GobKQSc
+id: paragraph.pzt_downloads.default
+targetEntityType: paragraph
+bundle: pzt_downloads
+mode: default
+content:
+  field_downloads:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_pizzetta_settings:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: pizzetta_settings_formatter
+    region: content
+hidden:
+  field_title: true
+  search_api_excerpt: true

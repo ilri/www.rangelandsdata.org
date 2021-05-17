@@ -1,0 +1,5 @@
+name: Span Fight
+description: Custom filter to fight multiple nested span (usually pasted from Word)
+type: module
+package: custom
+core_version_requirement: ^8.9.0 || ^9.0

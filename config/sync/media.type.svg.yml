@@ -1,0 +1,16 @@
+uuid: 51b3ec08-6a1d-4e78-9320-0ceb8fd5f85e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ucfJP_MF2qZIzBTydkrkQbCrJ_8uVUL8mbBWX4J4AB8
+id: svg
+label: SVG
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

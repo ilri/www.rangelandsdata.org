@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ratio
+    - paragraphs.paragraphs_type.pzt_articles
+  module:
+    - options
+id: paragraph.pzt_articles.field_ratio
+field_name: field_ratio
+entity_type: paragraph
+bundle: pzt_articles
+label: Ratio
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: teaser_square
+default_value_callback: ''
+settings: {  }
+field_type: list_string

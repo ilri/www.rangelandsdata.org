@@ -1,0 +1,14 @@
+uuid: 347070ac-d1b9-4386-be82-12ef30b2b5a0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:eeb0885c-77fd-40d9-98aa-9b04ad7dd4e3'
+_core:
+  default_config_hash: i1MLrkrF9OsCDhoexaV5oElzUAHC54Y5tuxUULsd7lI
+id: pzt_picture
+label: Picture
+icon_uuid: eeb0885c-77fd-40d9-98aa-9b04ad7dd4e3
+icon_default: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgODAiPjxwYXRoIGQ9Ik05NywzVjc3SDNWM0g5N20zLTNIMFY4MEgxMDBWMFoiLz48cG9seWxpbmUgcG9pbnRzPSIyMCA3MCA2MCAzMCA5MCA2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iNSIvPjxjaXJjbGUgY3g9IjgwIiBjeT0iMjAiIHI9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBvbHlsaW5lIHBvaW50cz0iMTAgNDUgMjUgMzAgNDAgNDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjUiLz48L3N2Zz4='
+description: ''
+behavior_plugins: {  }

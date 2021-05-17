@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_caption
+    - paragraphs.paragraphs_type.pzt_picture_gallery
+  module:
+    - text
+id: paragraph.pzt_picture_gallery.field_caption
+field_name: field_caption
+entity_type: paragraph
+bundle: pzt_picture_gallery
+label: Caption
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

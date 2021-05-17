@@ -1,0 +1,20 @@
+uuid: 607b8e3a-320a-443c-aff0-8d6c7afb74cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: DrgZc8K6ykuNNZj8H5vGZ0i42uuCuDlumvKNN3qEdIs
+id: taxonomy_term.field_negative_text
+field_name: field_negative_text
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

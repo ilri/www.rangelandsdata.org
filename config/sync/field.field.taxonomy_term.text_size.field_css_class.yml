@@ -1,0 +1,21 @@
+uuid: 79acfbe0-db2e-498e-ab3e-9c2314318eec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_css_class
+    - taxonomy.vocabulary.text_size
+_core:
+  default_config_hash: c_a1qGGGsKd54jyh2ByEim0HdW8ejm3JMMrAtHPuXH4
+id: taxonomy_term.text_size.field_css_class
+field_name: field_css_class
+entity_type: taxonomy_term
+bundle: text_size
+label: 'CSS Class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

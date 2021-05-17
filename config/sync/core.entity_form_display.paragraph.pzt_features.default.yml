@@ -1,0 +1,72 @@
+uuid: cfcc3521-bb65-460e-a411-3d2eaf8d3c17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_features.field_animate_decimals
+    - field.field.paragraph.pzt_features.field_animate_values
+    - field.field.paragraph.pzt_features.field_feature
+    - field.field.paragraph.pzt_features.field_pizzetta_settings
+    - field.field.paragraph.pzt_features.field_title
+    - paragraphs.paragraphs_type.pzt_features
+  module:
+    - paragraphs
+    - pizzetta
+_core:
+  default_config_hash: 1dGjigkiFv9CJOkURYZ_Z5LIVdsTsH83BT8VhcpZQ8A
+id: paragraph.pzt_features.default
+targetEntityType: paragraph
+bundle: pzt_features
+mode: default
+content:
+  field_animate_decimals:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_animate_values:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_feature:
+    type: paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: feature
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_pizzetta_settings:
+    weight: 0
+    settings:
+      open: false
+    third_party_settings: {  }
+    type: pizzetta_settings_widget
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

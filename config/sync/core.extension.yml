@@ -12,6 +12,7 @@ module:
   breakpoint: 0
   ckeditor: 0
   color: 0
+  composite_reference: 0
   config: 0
   config_filter: 0
   config_split: 0
@@ -28,6 +29,7 @@ module:
   entity_reference_revisions: 0
   field: 0
   field_group: 0
+  field_permissions: 0
   field_ui: 0
   file: 0
   file_delete: 0
@@ -36,11 +38,15 @@ module:
   history: 0
   image: 0
   image_widget_crop: 0
+  jquery_ui: 0
+  layout_builder: 0
   layout_discovery: 0
+  layout_options: 0
   layout_paragraphs: 0
   link: 0
   media: 0
   media_library: 0
+  media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0
@@ -51,15 +57,20 @@ module:
   paragraphs_features: 0
   path: 0
   path_alias: 0
+  pizzetta: 0
+  pizzetta_layout: 0
   quickedit: 0
   rdf: 0
   redirect: 0
   redirect_404: 0
   search: 0
+  select2: 0
   shortcut: 0
+  structure_sync: 0
   svg_image: 0
   system: 0
   taxonomy: 0
+  taxonomy_manager: 0
   text: 0
   token: 0
   toolbar: 0

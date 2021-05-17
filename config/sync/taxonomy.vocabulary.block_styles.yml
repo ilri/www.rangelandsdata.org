@@ -1,0 +1,10 @@
+uuid: 2adebbbc-9f42-4d5e-a282-414d699010df
+langcode: zxx
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0EXj-c3-Db3ZyfMsH36fK7QwTF36LtSmItm4XEM7r8o
+name: 'Block styles'
+vid: block_styles
+description: ''
+weight: 0

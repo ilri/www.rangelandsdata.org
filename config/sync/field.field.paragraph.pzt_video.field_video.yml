@@ -1,0 +1,31 @@
+uuid: 31d39f13-fba3-42f7-9af3-2b94755e1a77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.pzt_video
+_core:
+  default_config_hash: osaHoL7ef9v074USCsVdj0t8-K4dDAytM6Tzbf80RNY
+id: paragraph.pzt_video.field_video
+field_name: field_video
+entity_type: paragraph
+bundle: pzt_video
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

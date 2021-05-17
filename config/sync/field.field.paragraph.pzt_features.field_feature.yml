@@ -1,0 +1,58 @@
+uuid: d3995013-08ed-4bc9-a379-84c2170c85aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feature
+    - paragraphs.paragraphs_type.feature
+    - paragraphs.paragraphs_type.pzt_features
+  module:
+    - composite_reference
+    - entity_reference_revisions
+third_party_settings:
+  composite_reference:
+    composite: true
+_core:
+  default_config_hash: qntp2y28Zg7SECiAWs5hrnty5etOG5RAa1xuCir-zEs
+id: paragraph.pzt_features.field_feature
+field_name: field_feature
+entity_type: paragraph
+bundle: pzt_features
+label: Feature
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      feature: feature
+    target_bundles_drag_drop:
+      feature:
+        enabled: true
+        weight: 9
+      layout:
+        weight: 10
+        enabled: false
+      pzt_features:
+        weight: 11
+        enabled: false
+      pzt_landing_page_header:
+        weight: 12
+        enabled: false
+      pzt_picture:
+        weight: 13
+        enabled: false
+      pzt_picture_gallery:
+        weight: 14
+        enabled: false
+      pzt_text_block:
+        weight: 15
+        enabled: false
+      pzt_video:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

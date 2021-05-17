@@ -1,0 +1,25 @@
+uuid: 7dd9a776-3a58-4d56-b6ea-393122fed522
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_more
+    - paragraphs.paragraphs_type.pzt_articles
+  module:
+    - link
+_core:
+  default_config_hash: XpH3N_LVJgBTZbmPt4fgmjT5Uvr6Mooh0p9knR53bUE
+id: paragraph.pzt_articles.field_view_more
+field_name: field_view_more
+entity_type: paragraph
+bundle: pzt_articles
+label: 'View more link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

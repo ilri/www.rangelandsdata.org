@@ -1,0 +1,91 @@
+uuid: ef5509f8-c4f0-409d-8048-8b0302f1ffa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_landing_page_header.field_body
+    - field.field.paragraph.pzt_landing_page_header.field_main_action
+    - field.field.paragraph.pzt_landing_page_header.field_pizzetta_settings
+    - field.field.paragraph.pzt_landing_page_header.field_secondary_action
+    - field.field.paragraph.pzt_landing_page_header.field_text_alignment
+    - field.field.paragraph.pzt_landing_page_header.field_title
+    - paragraphs.paragraphs_type.pzt_landing_page_header
+  module:
+    - link
+    - text
+_core:
+  default_config_hash: _TtzAMpzMCfijKgT3KyVzxfPalMLPkF974IqXavNIqw
+id: paragraph.pzt_landing_page_header.default
+targetEntityType: paragraph
+bundle: pzt_landing_page_header
+mode: default
+content:
+  field_background_image:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_main_action:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_secondary_action:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_background_color: true
+  field_background_image_opacity: true
+  field_block_position: true
+  field_custom_css_style: true
+  field_fixed_background: true
+  field_hide_title: true
+  field_internal_padding_bottom: true
+  field_internal_padding_left: true
+  field_internal_padding_right: true
+  field_internal_padding_top: true
+  field_margin_bottom: true
+  field_margin_left: true
+  field_margin_right: true
+  field_margin_top: true
+  field_negative: true
+  field_pizzetta_settings: true
+  field_show_title_in_side_menu: true
+  field_text_alignment: true
+  field_title_level: true
+  search_api_excerpt: true

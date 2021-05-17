@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_body
     - field.field.node.page.field_header_image
     - node.type.page
   module:
@@ -26,4 +27,5 @@ content:
       image_link: ''
     third_party_settings: {  }
 hidden:
+  field_body: true
   links: true

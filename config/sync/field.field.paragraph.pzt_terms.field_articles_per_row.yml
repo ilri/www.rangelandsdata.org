@@ -1,0 +1,25 @@
+uuid: 3977811b-9e68-48f7-b028-ed25e06142e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_articles_per_row
+    - paragraphs.paragraphs_type.pzt_terms
+  module:
+    - options
+_core:
+  default_config_hash: DFTnDjmi0rn3hiPpRicSzRptfm9ijTvHajEOJYn_TZY
+id: paragraph.pzt_terms.field_articles_per_row
+field_name: field_articles_per_row
+entity_type: paragraph
+bundle: pzt_terms
+label: 'Articles per row'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: auto
+default_value_callback: ''
+settings: {  }
+field_type: list_string

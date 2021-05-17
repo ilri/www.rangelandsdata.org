@@ -1,0 +1,10 @@
+uuid: 5450ae71-5ce7-4471-a904-476531193984
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mbXYfpvHJ7Cq9PWiPA7pwftpNlNdaNQlhVIh3sknGW4
+name: Module
+vid: module
+description: ''
+weight: -10

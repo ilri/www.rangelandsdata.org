@@ -1,0 +1,20 @@
+uuid: 4337fd70-74c0-4624-8c73-9abfbbc63259
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:23f04a40-5e31-4576-8424-7b659bf83612'
+  module:
+    - layout_paragraphs
+_core:
+  default_config_hash: cwkrQa-l-rOYTOVl42JnBHKA9XXPaZ_QCJw3xNftqTI
+id: pzt_layout
+label: Layout
+icon_uuid: 23f04a40-5e31-4576-8424-7b659bf83612
+icon_default: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTAwIj48cGF0aCBkPSJNNDUuNzQ4LDE0LjI1MnYyMS41aC0zMS41di0yMS41aDMxLjVNNTAsMTBIMTBWNDBINTBWMTBaIi8+PHBhdGggZD0iTTQ1Ljc0OCw1NC4yNTJ2MzEuNWgtMzEuNXYtMzEuNWgzMS41TTUwLDUwSDEwVjkwSDUwVjUwWiIvPjxwYXRoIGQ9Ik0xMDUuNzQ4LDE0LjI1MnY3MS41aC00MS41di03MS41aDQxLjVNMTEwLDEwSDYwVjkwaDUwVjEwWiIvPjwvc3ZnPg=='
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      pizzetta_layout_twocol: 'Two columns'

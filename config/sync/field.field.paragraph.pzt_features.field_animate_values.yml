@@ -1,0 +1,25 @@
+uuid: ed80fbcb-443f-42eb-9274-50105bd5b03b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_animate_values
+    - paragraphs.paragraphs_type.pzt_features
+_core:
+  default_config_hash: oIRmAc0ElxRm3K08sNzuTIf8zQ4zlgrywn_VNpY_Ixo
+id: paragraph.pzt_features.field_animate_values
+field_name: field_animate_values
+entity_type: paragraph
+bundle: pzt_features
+label: 'Animate values'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

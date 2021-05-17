@@ -1,0 +1,21 @@
+uuid: 036c0aa6-32a8-407c-bb8e-6f94cc88aa69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_label
+    - paragraphs.paragraphs_type.feature
+_core:
+  default_config_hash: sc2pBdkzu2jKFl10yN-3SaewryJda-7_xFVa4WMVNio
+id: paragraph.feature.field_label
+field_name: field_label
+entity_type: paragraph
+bundle: feature
+label: Label
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

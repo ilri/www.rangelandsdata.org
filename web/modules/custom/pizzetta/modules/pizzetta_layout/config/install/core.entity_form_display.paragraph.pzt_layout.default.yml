@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_layout.field_pizzetta_settings
+    - paragraphs.paragraphs_type.pzt_layout
+  module:
+    - pizzetta
+id: paragraph.pzt_layout.default
+targetEntityType: paragraph
+bundle: pzt_layout
+mode: default
+content:
+  field_pizzetta_settings:
+    weight: 0
+    settings:
+      open: false
+    third_party_settings: {  }
+    type: pizzetta_settings_widget
+    region: content
+hidden:
+  created: true
+  status: true

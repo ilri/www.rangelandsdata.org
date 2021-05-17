@@ -1,0 +1,42 @@
+uuid: 341b4da5-7679-40b9-a633-9082b8926f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.block_position.field_css_class
+    - field.field.taxonomy_term.block_position.field_icon
+    - taxonomy.vocabulary.block_position
+  module:
+    - text
+_core:
+  default_config_hash: VHzb568QnzyiXmIq1JuEw5hNG9bzVEcdOHzdNk9Z77Y
+id: taxonomy_term.block_position.default
+targetEntityType: taxonomy_term
+bundle: block_position
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_css_class:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_icon:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  search_api_excerpt: true

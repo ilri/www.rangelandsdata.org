@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_animate_decimals
+    - paragraphs.paragraphs_type.pzt_features
+id: paragraph.pzt_features.field_animate_decimals
+field_name: field_animate_decimals
+entity_type: paragraph
+bundle: pzt_features
+label: 'Animate decimals'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

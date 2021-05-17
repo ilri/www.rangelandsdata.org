@@ -1,0 +1,36 @@
+uuid: c2f4fef2-6a4c-460b-9282-1ba9f4c7c207
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_terms
+    - paragraphs.paragraphs_type.pzt_terms
+    - taxonomy.vocabulary.theme
+  module:
+    - composite_reference
+third_party_settings:
+  composite_reference:
+    composite: false
+_core:
+  default_config_hash: z1GdCK8K5NG59lrPDFe11vrlLM0NezZM26T7BWajjWA
+id: paragraph.pzt_terms.field_terms
+field_name: field_terms
+entity_type: paragraph
+bundle: pzt_terms
+label: Terms
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      theme: theme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: null
+field_type: entity_reference

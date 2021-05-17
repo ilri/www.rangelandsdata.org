@@ -1,0 +1,21 @@
+uuid: 7d1ee481-444b-41eb-a7c4-ab41e863d375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_css_class
+    - taxonomy.vocabulary.block_position
+_core:
+  default_config_hash: '-k4ZtuBYzxOWJPNrSbYQxoCCzvcSC5_dLHzBWqQ9Gb0'
+id: taxonomy_term.block_position.field_css_class
+field_name: field_css_class
+entity_type: taxonomy_term
+bundle: block_position
+label: 'CSS Class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

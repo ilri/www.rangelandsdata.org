@@ -1,0 +1,33 @@
+uuid: 8bcccd44-0b12-4b50-9f49-772ba4e33de3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_alignment
+    - paragraphs.paragraphs_type.pzt_landing_page_header
+    - taxonomy.vocabulary.text_alignment
+_core:
+  default_config_hash: 24ynbcoeQPdIwo1iSoXGLgMS8X4bg30pwEOVabiOUO0
+id: paragraph.pzt_landing_page_header.field_text_alignment
+field_name: field_text_alignment
+entity_type: paragraph
+bundle: pzt_landing_page_header
+label: 'Text alignment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: e684c4b5-93da-481f-8b5d-6e20c6a1ba6e
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      text_alignment: text_alignment
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

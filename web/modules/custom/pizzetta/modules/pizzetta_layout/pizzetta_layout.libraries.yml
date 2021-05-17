@@ -1,0 +1,11 @@
+onecol_section:
+  version: VERSION
+  css:
+    theme:
+      layouts/onecol/onecol.css: {}
+
+twocol_section:
+  version: VERSION
+  css:
+    theme:
+      layouts/twocol/twocol.css: {}

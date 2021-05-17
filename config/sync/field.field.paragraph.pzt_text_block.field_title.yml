@@ -1,0 +1,21 @@
+uuid: e174601d-7fd4-4146-8c8a-ba86f05ff5a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.pzt_text_block
+_core:
+  default_config_hash: h54IVO2Ct_f4lQk_IYwrurhdcvoTIOboQG9Ny9qE-Bw
+id: paragraph.pzt_text_block.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: pzt_text_block
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

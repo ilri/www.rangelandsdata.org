@@ -1,0 +1,25 @@
+uuid: 06306eea-e511-44df-81cb-8ced0fa7ef3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_value
+    - paragraphs.paragraphs_type.feature
+_core:
+  default_config_hash: y9QZJ1zTn98v4IsNIWCCmKIbj2rIAYbwEwPB90eUxrs
+id: paragraph.feature.field_value
+field_name: field_value
+entity_type: paragraph
+bundle: feature
+label: Value
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,10 @@
+uuid: 7e610a1b-c023-41b6-8cfd-a0a11759eb40
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FlANfTepX0SewOg2Nwhtq_wcS97j6vqcrowfA-5uEDQ
+name: 'Text alignment'
+vid: text_alignment
+description: ''
+weight: 4

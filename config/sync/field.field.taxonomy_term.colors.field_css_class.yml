@@ -1,0 +1,21 @@
+uuid: 779eeeb6-7647-4a96-afb4-c065454c29d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_css_class
+    - taxonomy.vocabulary.colors
+_core:
+  default_config_hash: kM3flAiYxvPK7RaE_UOpVEUZm765NI3X3_f7eQ9hdcA
+id: taxonomy_term.colors.field_css_class
+field_name: field_css_class
+entity_type: taxonomy_term
+bundle: colors
+label: 'Color CSS code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

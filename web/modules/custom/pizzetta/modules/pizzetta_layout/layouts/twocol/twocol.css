@@ -1,0 +1,15 @@
+
+.component--layout--two-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.component--layout--two-columns > .component--content--column {
+  flex: 0 1 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .component--layout--two-columns > .component--content--column {
+    flex: 0 1 50%;
+  }
+}

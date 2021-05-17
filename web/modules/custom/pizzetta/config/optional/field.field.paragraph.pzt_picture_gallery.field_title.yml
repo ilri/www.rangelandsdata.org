@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.pzt_picture_gallery
+id: paragraph.pzt_picture_gallery.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: pzt_picture_gallery
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

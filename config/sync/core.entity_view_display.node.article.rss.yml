@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.rss
+    - field.field.node.article.field_body
     - field.field.node.article.field_header_image
     - node.type.article
   module:
@@ -19,4 +20,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_body: true
   field_header_image: true
