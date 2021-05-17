@@ -53,6 +53,8 @@ module:
   options: 0
   override_node_options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
   paragraphs_edit: 0
   paragraphs_features: 0
   path: 0
