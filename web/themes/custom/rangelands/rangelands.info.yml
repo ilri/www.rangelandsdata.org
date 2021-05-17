@@ -1,0 +1,26 @@
+name: Rangelands Atlas theme
+description: A custom theme.
+screenshot: screenshot.png
+
+core_version_requirement: ^8 || ^9
+version: VERSION
+engine: twig
+type: theme
+base theme: classy
+
+regions:
+  header: Header
+  help: Help
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  content_top: Content Top
+  content: Content
+  content_bottom: Content Bottom
+  footer: Footer
+  menu_blocks: Menu blocks
+
+libraries:
+  - rangelands/style
+
+ckeditor_stylesheets:
+  - stylesheets/style.css

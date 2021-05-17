@@ -1,0 +1,49 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?07d498f1d7f297d521631d127355cc1f") format("truetype"),
+url("./flaticon.woff?07d498f1d7f297d521631d127355cc1f") format("woff"),
+url("./flaticon.woff2?07d498f1d7f297d521631d127355cc1f") format("woff2"),
+url("./flaticon.eot?07d498f1d7f297d521631d127355cc1f#iefix") format("embedded-opentype"),
+url("./flaticon.svg?07d498f1d7f297d521631d127355cc1f#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "left-up": "\f101",
+    "down-right": "\f102",
+    "double-arrows": "\f103",
+    "zoom-in": "\f104",
+    "zoom-out": "\f105",
+    "expand": "\f106",
+);
+
+.flaticon-left-up:before {
+    content: map-get($flaticon-map, "left-up");
+}
+.flaticon-down-right:before {
+    content: map-get($flaticon-map, "down-right");
+}
+.flaticon-double-arrows:before {
+    content: map-get($flaticon-map, "double-arrows");
+}
+.flaticon-zoom-in:before {
+    content: map-get($flaticon-map, "zoom-in");
+}
+.flaticon-zoom-out:before {
+    content: map-get($flaticon-map, "zoom-out");
+}
+.flaticon-expand:before {
+    content: map-get($flaticon-map, "expand");
+}
