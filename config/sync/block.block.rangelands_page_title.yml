@@ -2,6 +2,8 @@ uuid: 58ad8c56-e0d1-4b58-afd5-75833d269f55
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - rangelands
 _core:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true

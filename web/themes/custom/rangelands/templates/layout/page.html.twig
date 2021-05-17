@@ -47,6 +47,9 @@
 
 
   <div role="main" class="page--content">
+    {% if page.help %}
+      {{ page.help }}
+    {% endif %}
 
     <header role="banner" class="page-header boxed">
       <div class="header--logo">
@@ -55,30 +58,24 @@
       {{ page.header }}
     </header>
 
-    {{ page.primary_menu }}
-    {{ page.secondary_menu }}
-
-    {{ page.breadcrumb }}
-
-    {{ page.highlighted }}
-
-    {{ page.help }}
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
+    {% if page.breadcrumb %}
+      {{ page.breadcrumb }}
     {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
+    {% if page.highlighted %}
+      {{ page.highlighted }}
+    {% endif %}
+
+    {% if page.content_top %}
+    {{ page.content_top }}
+    {% endif %}
+
+    {% if page.content %}
+    {{ page.content }}
+    {% endif %}
+
+    {% if page.content_bottom %}
+    {{ page.content_bottom }}
     {% endif %}
 
   </div>

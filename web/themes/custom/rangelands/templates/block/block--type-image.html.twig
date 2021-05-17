@@ -27,9 +27,9 @@
 #}
 {%
   set classes = [
-    'block',
-    'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
+    'boxed',
+    'filler',
+    'p-relative',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -39,6 +39,12 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {{ content }}
+    {% if content.field_image.0 %}
+      {% set alt = content.field_image.0['#item'].alt %}
+      {% set style = content.field_image.0['#image_style'] %}
+      {%  set image = content.field_image.0['#item'].entity.uri.value | image_style(style) %}
+      <img src="{{ image }}" alt="{{ alt }}" class="as-bg">
+    {% endif %}
+    {{ content|without('field_image') }}
   {% endblock %}
 </div>

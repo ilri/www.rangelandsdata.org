@@ -253,3 +253,16 @@ taxonomies:
       field_negative_text:
         -
           value: '0'
+blocks:
+  -
+    info: 'Hero Map'
+    langcode: en
+    uuid: bedaf52d-fa05-4a4a-bfca-dc891ff6b603
+    bundle: image
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }
+      field_image:
+        -
+          target_id: '1'

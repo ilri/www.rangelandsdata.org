@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: image
-label: Image
+label: 'Image block'
 revision: 0
 description: ''
