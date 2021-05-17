@@ -15,3 +15,11 @@ effects:
     weight: 1
     data:
       crop_type: map_large
+  63d010ed-229c-4543-8a24-7178664fd4d8:
+    uuid: 63d010ed-229c-4543-8a24-7178664fd4d8
+    id: image_scale
+    weight: 2
+    data:
+      width: 2500
+      height: null
+      upscale: false
