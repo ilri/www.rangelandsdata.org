@@ -1,15 +1,15 @@
-uuid: 72012dd0-606e-4c83-863e-9b51269444db
+uuid: 65234da0-3cfa-4fec-a60a-7d417a291046
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - rangelands
 _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
-id: bartik_breadcrumbs
-theme: bartik
+id: rangelands_breadcrumbs
+theme: rangelands
 region: breadcrumb
 weight: 0
 provider: null

@@ -1,15 +1,15 @@
-uuid: 68963dd7-7821-4818-995d-2897190567bf
+uuid: 58ad8c56-e0d1-4b58-afd5-75833d269f55
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
+    - rangelands
 _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
-id: bartik_page_title
-theme: bartik
-region: content
-weight: -50
+id: rangelands_page_title
+theme: rangelands
+region: content_top
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

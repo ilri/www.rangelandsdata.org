@@ -1,15 +1,15 @@
-uuid: 88d82304-c013-49fe-922d-8353ddbc81fb
+uuid: 77a52c5a-68d7-42f7-a8ec-576663b406c8
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - rangelands
 _core:
   default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: bartik_content
-theme: bartik
+id: rangelands_content
+theme: rangelands
 region: content
 weight: 0
 provider: null

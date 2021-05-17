@@ -1,15 +1,15 @@
-uuid: 5f0350c6-f9a2-4471-90af-744c0d55fd33
+uuid: 24800356-2959-48c4-b7b8-95c969f8fb45
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
+    - rangelands
 _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: bartik_local_tasks
-theme: bartik
-region: content
-weight: -40
+id: rangelands_local_tasks
+theme: rangelands
+region: content_bottom
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

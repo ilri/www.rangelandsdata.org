@@ -1,17 +1,17 @@
-uuid: 95720d25-4f60-400a-b666-88ac3a3c7cee
+uuid: 9b8afee9-ca50-4641-95ec-3bb77fbe43e7
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - rangelands
 _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: bartik_branding
-theme: bartik
+id: rangelands_branding
+theme: rangelands
 region: header
-weight: 0
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
@@ -19,7 +19,7 @@ settings:
   label: 'Site branding'
   provider: system
   label_display: '0'
-  use_site_logo: true
+  use_site_logo: false
   use_site_name: true
   use_site_slogan: true
 visibility: {  }

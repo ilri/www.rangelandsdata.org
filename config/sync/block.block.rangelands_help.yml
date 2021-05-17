@@ -1,17 +1,17 @@
-uuid: 0f30d1e4-7d95-4d30-abb7-d43720320906
+uuid: f951c094-5748-4ddb-91da-7f362b8f0dcd
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - bartik
+    - rangelands
 _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
-id: bartik_help
-theme: bartik
-region: content
-weight: -30
+id: rangelands_help
+theme: rangelands
+region: highlighted
+weight: -4
 provider: null
 plugin: help_block
 settings:

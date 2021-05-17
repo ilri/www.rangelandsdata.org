@@ -1,4 +1,4 @@
-uuid: ad7d09dc-792a-4f01-bd5d-42925efa4e12
+uuid: 3dfaf2da-51ac-490c-ba42-8bee8364c3d0
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
+    - rangelands
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: bartik_main_menu
-theme: bartik
-region: primary_menu
-weight: 0
+id: rangelands_main_menu
+theme: rangelands
+region: header
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:

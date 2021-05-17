@@ -1,17 +1,17 @@
-uuid: 9a50187d-e0d8-4a79-b4bc-082d6c59a94d
+uuid: 7938e667-b111-4843-8bd6-f7f1e9361871
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - rangelands
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: bartik_messages
-theme: bartik
+id: rangelands_messages
+theme: rangelands
 region: highlighted
-weight: 0
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:
