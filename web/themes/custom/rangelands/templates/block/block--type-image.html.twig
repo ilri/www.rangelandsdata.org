@@ -30,14 +30,13 @@
     'boxed',
     'filler',
     'p-relative',
+    'contextual-region'
   ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
+    {% set id = content['#block_content'].id.value %}
+    {{ drupal_contextual_links('block_content:block_content='~ id) }}
   {% block content %}
     {% if content.field_image.0 %}
       {% set alt = content.field_image.0['#item'].alt %}

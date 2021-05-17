@@ -33,6 +33,22 @@ variant_settings:
             uuid: bedaf52d-fa05-4a4a-bfca-dc891ff6b603
           additional: {  }
           weight: 0
+        100e7835-abae-41f1-8e25-88447883aad8:
+          uuid: 100e7835-abae-41f1-8e25-88447883aad8
+          region: content
+          configuration:
+            id: 'block_content:4fc84206-8eb7-49ea-ae21-203cd5b46ff5'
+            label: 'Home page intro'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
+            type: paragraphs_block
+            uuid: 4fc84206-8eb7-49ea-ae21-203cd5b46ff5
+            context_mapping: {  }
+          additional: {  }
+          weight: 1
       third_party_settings: {  }
 page: home
 weight: 0

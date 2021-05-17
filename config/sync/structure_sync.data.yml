@@ -255,6 +255,18 @@ taxonomies:
           value: '0'
 blocks:
   -
+    info: 'Home page intro'
+    langcode: en
+    uuid: 4fc84206-8eb7-49ea-ae21-203cd5b46ff5
+    bundle: paragraphs_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_body:
+        -
+          target_id: '2'
+          target_revision_id: '2'
+  -
     info: 'Hero Map'
     langcode: en
     uuid: bedaf52d-fa05-4a4a-bfca-dc891ff6b603
