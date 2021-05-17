@@ -59,7 +59,7 @@
       {% set alt = content.field_map.0['#item'].alt %}
       {% set style = content.field_map.0['#image_style'] ? content.field_map.0['#image_style'] : 'map_large' %}
       {%  set image = content.field_map.0['#item'].entity.uri.value | image_style(style) %}
-      <img src="{{ image }}" alt="{{ alt }}" class="map" style="100%">
+      <img src="{{ image }}" alt="{{ alt }}" class="map" style="width:100%">
       {% if paragraph.field_legend.0 %}
         <div class="map--legend">
           {{ content.field_legend.0 }}

@@ -255,6 +255,15 @@ taxonomies:
           value: '0'
 blocks:
   -
+    info: 'Footer block'
+    langcode: en
+    uuid: 498a51b0-4559-4992-8fc5-dbb1c655cb27
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }
+  -
     info: 'Home page intro'
     langcode: en
     uuid: 4fc84206-8eb7-49ea-ae21-203cd5b46ff5
@@ -266,6 +275,9 @@ blocks:
         -
           target_id: '2'
           target_revision_id: '2'
+        -
+          target_id: '3'
+          target_revision_id: '3'
   -
     info: 'Hero Map'
     langcode: en

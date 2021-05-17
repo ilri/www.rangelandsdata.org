@@ -1,0 +1,25 @@
+uuid: f09da6cf-6cd4-48e5-98e1-ed0280f7811c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:498a51b0-4559-4992-8fc5-dbb1c655cb27'
+  module:
+    - block_content
+  theme:
+    - rangelands
+id: footerblock
+theme: rangelands
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:498a51b0-4559-4992-8fc5-dbb1c655cb27'
+settings:
+  id: 'block_content:498a51b0-4559-4992-8fc5-dbb1c655cb27'
+  label: 'Footer block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
