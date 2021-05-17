@@ -1,0 +1,26 @@
+{%
+  set classes = [
+  'card',
+  'picture-card',
+  'oratio16-9',
+  'card-type--' ~ node.bundle|clean_class,
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <a href="{{ url}}" class="cover-link"></a>
+  <div class="content">
+    {% if node.field_thumbnail.0 %}
+      {% set image = node.field_thumbnail.0.entity.uri.value | image_style('scale_450w') %}
+    {% elseif node.field_maps.0 %}
+      {% set image = node.field_maps.0.entity.field_map.entity.field_media_image.entity.uri.value | image_style('map_thumbnail') %}
+    {% endif %}
+    {% if image %}
+      <img src="{{ image }}">
+    {%  endif %}
+    {% if label %}
+      <h3{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h3>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,15 @@
+uuid: bddee859-f82d-4557-a36b-03dddebb6224
+langcode: en
+status: true
+dependencies: {  }
+name: scale_450w
+label: scale_450w
+effects:
+  fb92cd4b-a2e3-4d6e-a4cc-8656b370affb:
+    uuid: fb92cd4b-a2e3-4d6e-a4cc-8656b370affb
+    id: image_scale
+    weight: 1
+    data:
+      width: 900
+      height: null
+      upscale: false

@@ -49,6 +49,19 @@ variant_settings:
             context_mapping: {  }
           additional: {  }
           weight: 1
+        252c199c-5ef8-4b29-a55b-6d3b48b63deb:
+          uuid: 252c199c-5ef8-4b29-a55b-6d3b48b63deb
+          region: content
+          configuration:
+            id: 'views_block:maps-block_1'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            context_mapping: {  }
+          additional: {  }
+          weight: 2
       third_party_settings: {  }
 page: home
 weight: 0
