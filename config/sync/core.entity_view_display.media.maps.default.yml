@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.maps.field_media_image
-    - image.style.large
+    - image.style.map_large
     - media.type.maps
   module:
     - svg_image
@@ -17,12 +17,12 @@ content:
     label: visually_hidden
     weight: 0
     settings:
+      image_style: map_large
+      image_link: ''
+      svg_render_as_image: true
       svg_attributes:
         width: null
         height: null
-      svg_render_as_image: true
-      image_style: large
-      image_link: ''
     third_party_settings: {  }
     type: image
     region: content

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.map.field_legend
     - field.field.paragraph.map.field_map
+    - image.style.map_large
     - paragraphs.paragraphs_type.map
   module:
     - media
@@ -18,7 +19,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: ''
+      image_style: legend
       image_link: ''
     third_party_settings: {  }
     region: content
@@ -27,7 +28,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: map_large
       image_link: ''
     third_party_settings: {  }
     region: content

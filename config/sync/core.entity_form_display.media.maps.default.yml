@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.media.maps.field_media_image
-    - image.style.thumbnail
+    - image.style.map_thumbnail
     - media.type.maps
   module:
+    - image_widget_crop
     - path
-    - svg_image
 id: media.maps.default
 targetEntityType: media
 bundle: maps
@@ -23,10 +23,18 @@ content:
   field_media_image:
     weight: 0
     settings:
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: map_thumbnail
+      crop_preview_image_style: map_large
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      crop_list:
+        - map_large
+      crop_types_required:
+        - map_large
+      show_crop_area: false
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
     region: content
   name:
     type: string_textfield

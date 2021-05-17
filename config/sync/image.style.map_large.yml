@@ -1,0 +1,17 @@
+uuid: bed4e718-7e79-419b-b825-e7d26cab059d
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.map_large
+  module:
+    - crop
+name: map_large
+label: 'map large'
+effects:
+  d0f71465-f7e8-434f-934c-2ebf05cf71f5:
+    uuid: d0f71465-f7e8-434f-934c-2ebf05cf71f5
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: map_large

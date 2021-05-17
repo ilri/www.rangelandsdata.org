@@ -47,13 +47,10 @@
 
 
   <div role="main" class="page--content">
-    {% if page.help %}
-      {{ page.help }}
-    {% endif %}
 
     <header role="banner" class="page-header boxed">
       <div class="header--logo">
-        <h1><a href="index.php">Rangelands <span>Atlas</span></a></h1>
+        <h1><a href="{{ url('<front>') }}">Rangelands <span>Atlas</span></a></h1>
       </div>
       {{ page.header }}
     </header>
@@ -74,11 +71,16 @@
     {{ page.content }}
     {% endif %}
 
-    {% if page.content_bottom %}
-    {{ page.content_bottom }}
-    {% endif %}
 
   </div>
+
+  {% if page.content_bottom %}
+    {{ page.content_bottom }}
+  {% endif %}
+
+  {% if page.help %}
+    {{ page.help }}
+  {% endif %}
 
   {% if page.footer %}
     <footer role="contentinfo" class="page-footer boxed">

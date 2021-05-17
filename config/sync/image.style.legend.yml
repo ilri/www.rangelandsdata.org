@@ -1,0 +1,17 @@
+uuid: 603f612c-f372-4c41-92a8-7c412f8b0f7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.legend
+  module:
+    - crop
+name: legend
+label: legend
+effects:
+  6de24c98-4ee0-41a8-8cf9-e1afeab74eb8:
+    uuid: 6de24c98-4ee0-41a8-8cf9-e1afeab74eb8
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: legend

@@ -1,0 +1,12 @@
+uuid: 7c5932a1-623d-4d41-b92f-600acc4efab1
+langcode: en
+status: true
+dependencies: {  }
+id: map_large
+label: 'map large'
+description: ''
+aspect_ratio: ''
+soft_limit_width: 2500
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null
