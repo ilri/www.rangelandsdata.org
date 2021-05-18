@@ -70,14 +70,31 @@
  *   in different view modes.
  */
 #}
+{% block maps %}
     {{ content.field_maps }}
-<div class="article--body contextual-region">
-  {{ title_prefix }}
-  {{ title_suffix }}
-  {{ content|without('field_maps', 'field_related_content') }}
-</div>
-{% if node.field_related_content.0 %}
-  <div class="article--related-content">
-    {{ content.field_related_content }}
+{% endblock %}
+{% block header_image %}
+  {% if node.field_header_image.0  %}
+    <div class="case-study--header-image p-relative min-height-50 ">
+      {% set alt = content.field_header_image.0['#item'].alt %}
+      {% set style = content.field_header_image.0['#image_style'] ? content.field_header_image.0['#image_style'] : 'scale_1920' %}
+      {%  set image = content.field_header_image.0['#item'].entity.uri.value | image_style(style) %}
+      <img src="{{ image }}" alt="{{ alt }}" class="as-bg">
+    </div>
+  {% endif %}
+{% endblock %}
+{% block body %}
+  <div class="article--body contextual-region">
+    {{ title_prefix }}
+    {{ title_suffix }}
+    {{ content|without('field_maps', 'field_header_image', 'field_related_content') }}
   </div>
-{% endif %}
+{% endblock %}
+
+{% block related %}
+  {% if node.field_related_content.0 %}
+    <div class="article--related-content">
+      {{ content.field_related_content }}
+    </div>
+  {% endif %}
+{% endblock %}
