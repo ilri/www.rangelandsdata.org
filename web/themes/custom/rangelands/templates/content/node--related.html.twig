@@ -70,14 +70,34 @@
  *   in different view modes.
  */
 #}
-    {{ content.field_maps }}
-<div class="article--body contextual-region">
+{%
+  set classes = [
+  'case-study',
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+<article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
-  {{ title_suffix }}
-  {{ content|without('field_maps', 'field_related_content') }}
-</div>
-{% if node.field_related_content.0 %}
-  <div class="article--related-content">
-    {{ content.field_related_content }}
+  <div class="case-study--heading">
+    <h2{{ title_attributes }}>
+      {{ label }}
+    </h2>
   </div>
-{% endif %}
+  {{ title_suffix }}
+  {% if node.field_header_image.0  %}
+  <div class="case-study--header-image p-relative min-height-50 ">
+    {% set alt = content.field_header_image.0['#item'].alt %}
+    {% set style = content.field_header_image.0['#image_style'] ? content.field_header_image.0['#image_style'] : 'scale_1920' %}
+    {%  set image = content.field_header_image.0['#item'].entity.uri.value | image_style(style) %}
+    <img src="{{ image }}" alt="{{ alt }}" class="as-bg">
+  </div>
+  {% endif %}
+  {% if node.field_body.0  %}
+  <div class="case-study--body">
+  {{ content|without('field_header_image') }}
+  </div>
+  {% endif %}
+</article>
