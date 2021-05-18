@@ -11,6 +11,7 @@ module:
   block_content_permissions: 0
   breakpoint: 0
   ckeditor: 0
+  ckeditor_acr: 0
   ckeditor_codemirror: 0
   color: 0
   composite_reference: 0
@@ -69,6 +70,7 @@ module:
   search: 0
   select2: 0
   shortcut: 0
+  spanfight: 0
   structure_sync: 0
   svg_image: 0
   system: 0

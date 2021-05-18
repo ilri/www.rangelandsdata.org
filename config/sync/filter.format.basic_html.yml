@@ -5,6 +5,7 @@ dependencies:
   module:
     - editor
     - media
+    - spanfight
 _core:
   default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
 name: 'Basic HTML'
@@ -53,3 +54,9 @@ filters:
       default_view_mode: default
       allowed_media_types: {  }
       allowed_view_modes: {  }
+  filter_spanfight:
+    id: filter_spanfight
+    provider: spanfight
+    status: true
+    weight: 0
+    settings: {  }

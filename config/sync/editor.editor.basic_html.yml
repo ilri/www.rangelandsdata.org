@@ -42,6 +42,8 @@ settings:
       language_list: un
     stylescombo:
       styles: ''
+    acrconfig:
+      ckeditor_acr_config: 'span[!class]{*}(*)'
     codemirror:
       enable: true
       startupMode: wysiwyg

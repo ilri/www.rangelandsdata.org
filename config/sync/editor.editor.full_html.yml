@@ -56,6 +56,8 @@ settings:
       language_list: un
     stylescombo:
       styles: ''
+    acrconfig:
+      ckeditor_acr_config: ''
     codemirror:
       enable: true
       startupMode: wysiwyg
