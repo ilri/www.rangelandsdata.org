@@ -70,4 +70,7 @@
  *   in different view modes.
  */
 #}
-    {{ content }}
+    {{ content.field_maps }}
+<div class="article--body">
+  {{ content|without('field_maps') }}
+</div>
