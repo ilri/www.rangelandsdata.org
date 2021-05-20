@@ -7,8 +7,8 @@ dependencies:
     - image.style.thumbnail
     - media.type.legends
   module:
+    - image_widget_crop
     - path
-    - svg_image
 id: media.legends.default
 targetEntityType: media
 bundle: legends
@@ -23,10 +23,17 @@ content:
   field_media_image:
     weight: 0
     settings:
-      progress_indicator: throbber
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      progress_indicator: throbber
+      crop_list:
+        - legend
+      crop_types_required: {  }
+      show_crop_area: false
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
     region: content
   name:
     type: string_textfield

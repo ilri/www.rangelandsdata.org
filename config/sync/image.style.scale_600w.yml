@@ -1,0 +1,25 @@
+uuid: dff6f784-eae5-4227-9180-58f79ac24c09
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.w600
+  module:
+    - crop
+name: scale_600w
+label: scale_600w
+effects:
+  6b6e5da2-bdec-44ce-90c0-f0c5c2b57064:
+    uuid: 6b6e5da2-bdec-44ce-90c0-f0c5c2b57064
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: w600
+  cf762394-1fdb-400b-8435-a452cfd25adc:
+    uuid: cf762394-1fdb-400b-8435-a452cfd25adc
+    id: image_scale
+    weight: 2
+    data:
+      width: 600
+      height: null
+      upscale: false

@@ -11,7 +11,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_paragraphs
-    - media
     - user
 id: node.map.default
 targetEntityType: node
@@ -19,7 +18,7 @@ bundle: map
 mode: default
 content:
   field_body:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -27,18 +26,9 @@ content:
     third_party_settings: {  }
     type: layout_paragraphs
     region: content
-  field_header_image:
-    weight: 0
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: media_thumbnail
-    region: content
   field_maps:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -46,7 +36,7 @@ content:
     third_party_settings: {  }
     region: content
   field_related_content:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       view_mode: related
@@ -55,4 +45,5 @@ content:
     type: entity_reference_entity_view
     region: content
 hidden:
+  field_header_image: true
   links: true

@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   file_directory: maps
   file_extensions: 'png jpg jpeg svg'
-  max_filesize: ''
+  max_filesize: '20 MB'
   max_resolution: ''
   min_resolution: ''
   alt_field: true
