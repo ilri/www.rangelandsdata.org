@@ -74,7 +74,7 @@
     {{ content.field_maps }}
 {% endblock %}
 {% block header_image %}
-  {% if node.field_header_image.0  %}
+  {% if content.field_header_image.0  %}
     <div class="case-study--header-image p-relative min-height-50 ">
       {% set alt = content.field_header_image.0['#item'].alt %}
       {% set style = content.field_header_image.0['#image_style'] ? content.field_header_image.0['#image_style'] : 'scale_1920' %}
@@ -92,7 +92,7 @@
 {% endblock %}
 
 {% block related %}
-  {% if node.field_related_content.0 %}
+  {% if content.field_related_content.0 %}
     <div class="article--related-content">
       {{ content.field_related_content }}
     </div>
