@@ -75,4 +75,11 @@
       </div>
     </div>
   {% endif %}
+  {% if paragraph.field_body.0 %}
+    <div class="boxed component component-type--text position--center pad">
+      <div class="component--content">
+        {{ content.field_body.0 }}
+      </div>
+    </div>
+  {% endif %}
 {% endblock paragraph %}

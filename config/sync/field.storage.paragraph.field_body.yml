@@ -3,8 +3,12 @@ langcode: en
 status: true
 dependencies:
   module:
+    - field_permissions
     - paragraphs
     - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
 _core:
   default_config_hash: P_x4yGQ6vORFLUdCx4J9Uh_os34wNdf5pNFyMC509NI
 id: paragraph.field_body
