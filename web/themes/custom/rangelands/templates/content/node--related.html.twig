@@ -92,7 +92,7 @@
     {% set alt = content.field_header_image.0['#item'].alt %}
     {% set style = content.field_header_image.0['#image_style'] ? content.field_header_image.0['#image_style'] : 'scale_1920' %}
     {%  set image = content.field_header_image.0['#item'].entity.uri.value | image_style(style) %}
-    <img src="{{ image }}" alt="{{ alt }}" class="as-bg">
+    <img src="{{ image }}" alt="{{ alt }}">
   </div>
   {% endif %}
   {% if node.field_body.0  %}
