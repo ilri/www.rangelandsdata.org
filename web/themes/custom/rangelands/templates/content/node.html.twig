@@ -88,11 +88,13 @@
   {% endif %}
 {% endblock %}
 {% block body %}
+  {% if content.body.0 %}
   <div class="article--body contextual-region">
     {{ title_prefix }}
     {{ title_suffix }}
     {{ content|without('field_maps', 'field_header_image', 'field_related_content') }}
   </div>
+  {% endif %}
 {% endblock %}
 
 {% block related %}

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.paragraph.teaser
     - field.field.paragraph.map.field_body
     - field.field.paragraph.map.field_legend
+    - field.field.paragraph.map.field_legend_size
     - field.field.paragraph.map.field_map
     - field.field.paragraph.map.field_title
     - image.style.map_thumbnail
@@ -34,4 +35,5 @@ content:
 hidden:
   field_body: true
   field_legend: true
+  field_legend_size: true
   field_title: true
