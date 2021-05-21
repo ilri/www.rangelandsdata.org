@@ -251,7 +251,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      title: 'Maps order page'
+      title: 'Sort maps'
       defaults:
         title: false
         style: false
@@ -444,7 +444,7 @@ display:
           prefix: ''
           suffix: ''
           plugin_id: numeric
-      path: admin/maps/order
+      path: admin/maps/sort
       menu:
         type: tab
         title: 'Order Maps'

@@ -73,7 +73,7 @@
 
   {% if 'administrator' in user.getroles or 'editor' in user.getroles %}
     <div class="order-maps--widget pad-half">
-      <a href="{{ url('view.maps.page_2') }}" class="action">{{ 'Order maps'|t }}</a>
+      <a href="{{ url('view.maps.page_2') }}" class="action tiny light">{{ 'Sort maps'|t }}</a>
     </div>
   {% endif %}
   {% if pager %}
