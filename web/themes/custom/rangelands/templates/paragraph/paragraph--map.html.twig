@@ -62,7 +62,6 @@
       <img src="{{ image }}" alt="{{ alt }}" class="map" style="width:100%">
       {% if paragraph.field_legend.0 %}
         {% set legend_size = paragraph.field_legend_size.value ? paragraph.field_legend_size.value : 'normal' %}
-        {{ dd(paragraph.field_legend_size.value) }}
         <div class="map--legend {{ legend_size }}">
           {{ content.field_legend.0 }}
         </div>
