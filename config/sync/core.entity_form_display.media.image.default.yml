@@ -40,7 +40,7 @@ content:
       crop_preview_image_style: crop_thumbnail
       progress_indicator: throbber
       crop_list:
-        - map_large
+        - w1920
         - w600
       crop_types_required: {  }
       show_crop_area: false
