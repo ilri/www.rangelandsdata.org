@@ -11,7 +11,6 @@ dependencies:
     - image.style.scale_450w
     - node.type.map
   module:
-    - entity_reference_revisions
     - media
     - user
 id: node.map.teaser
@@ -21,23 +20,15 @@ mode: teaser
 content:
   field_header_image:
     type: media_thumbnail
-    weight: 1
+    weight: 0
     region: content
     label: hidden
     settings:
       image_style: scale_450w
       image_link: ''
     third_party_settings: {  }
-  field_maps:
-    type: entity_reference_revisions_entity_view
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: ''
-    third_party_settings: {  }
 hidden:
   field_body: true
+  field_maps: true
   field_related_content: true
   links: true

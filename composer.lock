@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae5bc5ac15d232ee6a4bcc52a10af722",
+    "content-hash": "d3f278ec080cf9fa4ab17cb553171e94",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3531,6 +3531,11 @@
                         "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                         "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                     }
+                },
+                "patches_applied": {
+                    "Allow media items to be edited in a modal when using the field widget": "https://www.drupal.org/files/issues/2021-02-23/2985168-58.patch",
+                    "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
+                    "Allow edit Media items from Media Library modal dialog in CKEditor": "https://www.drupal.org/files/issues/2021-01-04/3168868-9.patch"
                 }
             },
             "autoload": {
@@ -4025,6 +4030,85 @@
             }
         },
         {
+            "name": "drupal/draggableviews",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/draggableviews.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/draggableviews-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "e13a6c625fb8ca370a32b76dfd9f8bea9b2e27e9"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "require-dev": {
+                "drupal/draggableviews_demo": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1620931210",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Tyler Struyk (iStryker)",
+                    "homepage": "https://www.drupal.org/u/istryker",
+                    "email": "tyler.struyk@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Andrii Podanenko (podarok)",
+                    "homepage": "https://www.drupal.org/u/podarok",
+                    "email": "podarokua@gmail.com",
+                    "role": "Drupal 7 to 8 Porter"
+                },
+                {
+                    "name": "Yuriy Gerasimov (ygerasimov)",
+                    "homepage": "https://www.drupal.org/u/ygerasimov",
+                    "email": "yuriy.gerasimov@gmail.com",
+                    "role": "Ex Maintainer (D7)"
+                },
+                {
+                    "name": "Severin Unger (sevi)",
+                    "homepage": "https://www.drupal.org/u/sevi",
+                    "role": "Ex Maintainer (D6)"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "sevi",
+                    "homepage": "https://www.drupal.org/user/199290"
+                },
+                {
+                    "name": "ygerasimov",
+                    "homepage": "https://www.drupal.org/user/257311"
+                }
+            ],
+            "description": "DraggableViews module makes views draggable.",
+            "homepage": "https://www.drupal.org/project/draggableviews",
+            "support": {
+                "source": "https://cgit.drupalcode.org/draggableviews",
+                "issues": "https://www.drupal.org/project/issues/draggableviews"
+            }
+        },
+        {
             "name": "drupal/dropzonejs",
             "version": "2.5.0",
             "source": {
@@ -4056,6 +4140,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Make dropzonejs widget available to the new Media Library in core": "https://www.drupal.org/files/issues/2021-03-18/3051658-27.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4943,6 +5030,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "#3159222:jQuery UI Touch Punch library": "https://www.drupal.org/files/issues/2021-02-26/jquery_ui_touch_punch.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5467,7 +5557,8 @@
                 "source": "https://git.drupal.org/project/page_manager.git",
                 "issues": "https://www.drupal.org/project/issues/page_manager",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
+            },
+            "time": "2021-02-16T07:17:52+00:00"
         },
         {
             "name": "drupal/paragraphs",
@@ -6254,6 +6345,9 @@
                     "services": {
                         "drush.services.yml": "^9 || ^10"
                     }
+                },
+                "patches_applied": {
+                    "Exclude duplicate Links should keep the highest priority entry": "https://www.drupal.org/files/issues/2020-06-20/3022731_8_merge_duplicates_to_highest_priority.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6383,6 +6477,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "#3180878: getVocabularyId (undefined method)": "https://www.drupal.org/files/issues/2020-11-05/3180878-undefined-method-getVocabularyId-1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -12253,5 +12350,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }
