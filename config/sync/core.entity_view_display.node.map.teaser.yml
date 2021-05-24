@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.map.field_body
     - field.field.node.map.field_header_image
     - field.field.node.map.field_maps
+    - field.field.node.map.field_metatags
     - field.field.node.map.field_related_content
     - image.style.scale_450w
     - node.type.map
@@ -30,5 +31,6 @@ content:
 hidden:
   field_body: true
   field_maps: true
+  field_metatags: true
   field_related_content: true
   links: true

@@ -29,6 +29,7 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  emptyparagraphkiller: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
@@ -52,6 +53,7 @@ module:
   media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
   node: 0
   options: 0
   override_node_options: 0

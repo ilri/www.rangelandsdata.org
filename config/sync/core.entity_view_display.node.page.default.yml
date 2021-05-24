@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.page.field_body
     - field.field.node.page.field_header_image
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - layout_paragraphs
     - media
+    - metatag
     - user
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
@@ -34,6 +36,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: media_thumbnail
+    region: content
+  field_metatags:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
 hidden:
   links: true

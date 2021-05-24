@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - editor
+    - emptyparagraphkiller
     - media
     - spanfight
 _core:
@@ -57,6 +58,12 @@ filters:
   filter_spanfight:
     id: filter_spanfight
     provider: spanfight
+    status: true
+    weight: 0
+    settings: {  }
+  emptyparagraphkiller:
+    id: emptyparagraphkiller
+    provider: emptyparagraphkiller
     status: true
     weight: 0
     settings: {  }

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.field_body
     - field.field.node.article.field_header_image
+    - field.field.node.article.field_metatags
     - node.type.article
   module:
     - media
@@ -28,4 +29,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_body: true
+  field_metatags: true
   links: true

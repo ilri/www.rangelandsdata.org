@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3f278ec080cf9fa4ab17cb553171e94",
+    "content-hash": "49e798dbf81dd12bceba4b82b3cdf7b1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4277,6 +4277,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/easy_breadcrumb",
                 "issues": "https://www.drupal.org/project/issues/easy_breadcrumb"
+            }
+        },
+        {
+            "name": "drupal/emptyparagraphkiller",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/emptyparagraphkiller.git",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/emptyparagraphkiller-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "349fdd4f15801103f722cd7bc9c6c923f9c5b56a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1599613120",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "SKAUGHT",
+                    "homepage": "https://www.drupal.org/user/297907"
+                },
+                {
+                    "name": "baikho",
+                    "homepage": "https://www.drupal.org/user/2727459"
+                },
+                {
+                    "name": "siliconmeadow",
+                    "homepage": "https://www.drupal.org/user/55284"
+                }
+            ],
+            "description": "Filters out pesky empty paragraphs.",
+            "homepage": "https://www.drupal.org/project/emptyparagraphkiller",
+            "support": {
+                "source": "https://git.drupalcode.org/project/emptyparagraphkiller"
             }
         },
         {
@@ -12339,6 +12391,7 @@
         "drupal/backup_migrate": 5,
         "drupal/better_exposed_filters": 10,
         "drupal/composite_reference": 15,
+        "drupal/emptyparagraphkiller": 15,
         "drupal/layout_paragraphs": 10,
         "drupal/linkit": 10,
         "drupal/page_manager": 20,

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.related
     - field.field.node.article.field_body
     - field.field.node.article.field_header_image
+    - field.field.node.article.field_metatags
     - image.style.scale_1920
     - node.type.article
   module:
@@ -43,4 +44,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_metatags: true
   links: true

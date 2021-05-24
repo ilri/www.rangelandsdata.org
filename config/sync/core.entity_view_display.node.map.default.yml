@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.map.field_body
     - field.field.node.map.field_header_image
     - field.field.node.map.field_maps
+    - field.field.node.map.field_metatags
     - field.field.node.map.field_related_content
     - node.type.map
   module:
     - entity_reference_revisions
     - layout_paragraphs
+    - metatag
     - user
 id: node.map.default
 targetEntityType: node
@@ -34,6 +36,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_metatags:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_related_content:
     weight: 2

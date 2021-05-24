@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.node.article.field_body
     - field.field.node.article.field_header_image
+    - field.field.node.article.field_metatags
     - image.style.scale_1920
     - node.type.article
   module:
     - layout_paragraphs
     - media
+    - metatag
     - user
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
@@ -35,6 +37,13 @@ content:
       image_style: scale_1920
       image_link: ''
     third_party_settings: {  }
+    region: content
+  field_metatags:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
 hidden:
   links: true

@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.article.field_body
     - field.field.node.article.field_header_image
+    - field.field.node.article.field_metatags
     - node.type.article
   module:
     - layout_paragraphs
     - media_library
+    - metatag
     - path
 _core:
   default_config_hash: 6VUXB1jTUjK5zjkfMa2Kd2WW4sFUlgfBlfJSx01qLpU
@@ -38,6 +40,13 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_metatags:
+    weight: 26
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   path:
     type: path

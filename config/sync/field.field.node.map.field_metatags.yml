@@ -1,0 +1,21 @@
+uuid: cf99765e-c54e-4207-897b-9f32ea94f542
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.map
+  module:
+    - metatag
+id: node.map.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: map
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

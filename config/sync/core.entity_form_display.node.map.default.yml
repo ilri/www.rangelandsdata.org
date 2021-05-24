@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.map.field_body
     - field.field.node.map.field_header_image
     - field.field.node.map.field_maps
+    - field.field.node.map.field_metatags
     - field.field.node.map.field_related_content
     - node.type.map
   module:
     - layout_paragraphs
     - media_library
+    - metatag
     - paragraphs
     - paragraphs_features
     - path
@@ -64,6 +66,13 @@ content:
         show_drag_and_drop: true
         add_in_between: false
         split_text: false
+    region: content
+  field_metatags:
+    weight: 26
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_related_content:
     weight: 4

@@ -4,7 +4,9 @@ status: true
 dependencies:
   module:
     - editor
+    - emptyparagraphkiller
     - media
+    - spanfight
 _core:
   default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
 name: 'Full HTML'
@@ -54,3 +56,15 @@ filters:
       allowed_media_types:
         image: image
       allowed_view_modes: {  }
+  emptyparagraphkiller:
+    id: emptyparagraphkiller
+    provider: emptyparagraphkiller
+    status: true
+    weight: 0
+    settings: {  }
+  filter_spanfight:
+    id: filter_spanfight
+    provider: spanfight
+    status: true
+    weight: 0
+    settings: {  }
