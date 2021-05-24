@@ -49,17 +49,19 @@ variant_settings:
             context_mapping: {  }
           additional: {  }
           weight: 1
-        57567af4-a524-491e-9289-f6ed9d4a6dc0:
-          uuid: 57567af4-a524-491e-9289-f6ed9d4a6dc0
+        6699c4b8-9cbb-41e2-948a-386b8af14fb6:
+          uuid: 6699c4b8-9cbb-41e2-948a-386b8af14fb6
           region: content
           configuration:
-            id: 'views_block:maps-block_1'
-            label: ''
-            provider: views
+            id: 'block_content:d0080afd-217e-4e63-ae31-5ee33a2b637e'
+            label: 'Home paragraph block'
+            provider: block_content
             label_display: '0'
-            views_label: ''
-            items_per_page: none
-            context_mapping: {  }
+            status: true
+            info: ''
+            view_mode: full
+            type: paragraphs_block
+            uuid: d0080afd-217e-4e63-ae31-5ee33a2b637e
           additional: {  }
           weight: 2
       third_party_settings: {  }

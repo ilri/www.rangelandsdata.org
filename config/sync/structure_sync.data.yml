@@ -255,6 +255,18 @@ taxonomies:
           value: '0'
 blocks:
   -
+    info: 'Home paragraph block'
+    langcode: en
+    uuid: d0080afd-217e-4e63-ae31-5ee33a2b637e
+    bundle: paragraphs_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_body:
+        -
+          target_id: '71'
+          target_revision_id: '71'
+  -
     info: 'Footer block'
     langcode: en
     uuid: 498a51b0-4559-4992-8fc5-dbb1c655cb27
@@ -262,7 +274,11 @@ blocks:
     revision_id: null
     rev_id_current: null
     fields:
-      body: {  }
+      body:
+        -
+          value: "<div class=\"align-center\">\r\n<p>The Rangelands Atlas is the output of a collaboration between</p>\r\n</div>\r\n\r\n<div class=\"footer--logos\">\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"523f4bde-2338-4839-a231-dbc9925d98c8\"></drupal-media>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"5f4ef868-be1c-4429-acde-0c63e089a2c2\"></drupal-media>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"0be249f0-bae2-4dab-9c2d-5c9440b48bd1\"></drupal-media>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"d0e367aa-9ab8-4e11-beec-af5727b4aa3e\"></drupal-media>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"635b8b36-3d7a-411a-bbcd-a9bc5730e5eb\" data-view-mode=\"\"></drupal-media>\r\n</div>\r\n"
+          summary: ''
+          format: full_html
   -
     info: 'Home page intro'
     langcode: en
@@ -273,11 +289,8 @@ blocks:
     fields:
       field_body:
         -
-          target_id: '2'
-          target_revision_id: '2'
-        -
-          target_id: '3'
-          target_revision_id: '3'
+          target_id: '1'
+          target_revision_id: '1'
   -
     info: 'Hero Map'
     langcode: en
