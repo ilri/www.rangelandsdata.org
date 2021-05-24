@@ -59,13 +59,9 @@
       {% set alt = content.field_map.0['#item'].alt %}
       {% set style = content.field_map.0['#image_style'] ? content.field_map.0['#image_style'] : 'map_large' %}
       {%  set image = content.field_map.0['#item'].entity.uri.value | image_style(style) %}
-      <img src="{{ image }}" alt="{{ alt }}" class="map" style="width:100%">
-      {% if paragraph.field_legend.0 %}
-        {% set legend_size = paragraph.field_legend_size.value ? paragraph.field_legend_size.value : 'normal' %}
-        <div class="map--legend {{ legend_size }}">
-          {{ content.field_legend.0 }}
-        </div>
-      {% endif %}
+      <div class="map--wrapper">
+        <img src="{{ image }}" alt="{{ alt }}" class="map" style="width:100%">
+      </div>
       <div class="map--toolbar">
         <div class="map--actions">
           <a class="map--action map--action-zoom-in" href="#"><i class="flaticon-zoom-in"></i></a>
@@ -74,6 +70,14 @@
           <a class="map--action map--action-exit-full-screen" href="#"><i class="flaticon-down-right"></i></a>
         </div>
       </div>
+      {% if paragraph.field_legend.0 %}
+        {% set legend_size = paragraph.field_legend_size.value ? paragraph.field_legend_size.value : 'normal' %}
+        <div class="map--legend {{ legend_size }}">
+          <a class="map--legend--action map--legend--action--expand"><i class="flaticon-left-up"></i></a>
+          <a class="map--legend--action map--legend--action--collapse"><i class="flaticon-down-right"></i></a>
+          {{ content.field_legend.0 }}
+        </div>
+      {% endif %}
     </div>
   {% endif %}
   {% if paragraph.field_body.0 %}
