@@ -93,6 +93,9 @@
     {% set style = content.field_header_image.0['#image_style'] ? content.field_header_image.0['#image_style'] : 'scale_1920' %}
     {%  set image = content.field_header_image.0['#item'].entity.uri.value | image_style(style) %}
     <img src="{{ image }}" alt="{{ alt }}">
+    {% if node.field_header_image.0.entity.field_credits.value %}
+      <span class="credits">{{ node.field_header_image.0.entity.field_credits.value|raw }}</span>
+    {% endif %}
   </div>
   {% endif %}
   {% if node.field_body.0  %}
