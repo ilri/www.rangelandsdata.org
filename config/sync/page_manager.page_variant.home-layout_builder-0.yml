@@ -49,8 +49,8 @@ variant_settings:
             context_mapping: {  }
           additional: {  }
           weight: 1
-        252c199c-5ef8-4b29-a55b-6d3b48b63deb:
-          uuid: 252c199c-5ef8-4b29-a55b-6d3b48b63deb
+        57567af4-a524-491e-9289-f6ed9d4a6dc0:
+          uuid: 57567af4-a524-491e-9289-f6ed9d4a6dc0
           region: content
           configuration:
             id: 'views_block:maps-block_1'
