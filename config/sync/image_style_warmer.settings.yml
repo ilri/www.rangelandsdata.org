@@ -1,0 +1,9 @@
+initial_image_styles:
+  scale_600w: scale_600w
+  scale_600x400: scale_600x400
+queue_image_styles:
+  map_thumbnail: map_thumbnail
+  scale_1920: scale_1920
+  scale_600h: scale_600h
+  scale_600w: scale_600w
+  scale_600x400: scale_600x400
