@@ -1,0 +1,25 @@
+uuid: d1def4ef-26b5-4209-ab85-8d44c031c8c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+    - pizzetta
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: pORFwTXyOGKylS2Vl01Wl4ut-Ufn4JnlDVZkPzWWhwk
+id: paragraph.field_pizzetta_settings
+field_name: field_pizzetta_settings
+entity_type: paragraph
+type: pizzetta_settings
+settings: {  }
+module: pizzetta
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

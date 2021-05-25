@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_articles.field_articles
+    - field.field.paragraph.pzt_articles.field_articles_per_row
+    - field.field.paragraph.pzt_articles.field_pizzetta_settings
+    - field.field.paragraph.pzt_articles.field_ratio
+    - field.field.paragraph.pzt_articles.field_title
+    - field.field.paragraph.pzt_articles.field_view_more
+    - paragraphs.paragraphs_type.pzt_articles
+  module:
+    - link
+    - pizzetta
+id: paragraph.pzt_articles.default
+targetEntityType: paragraph
+bundle: pzt_articles
+mode: default
+content:
+  field_articles:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_articles_per_row:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_pizzetta_settings:
+    weight: 0
+    settings:
+      open: false
+    third_party_settings: {  }
+    type: pizzetta_settings_widget
+    region: content
+  field_ratio:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view_more:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

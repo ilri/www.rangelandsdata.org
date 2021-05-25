@@ -1,0 +1,54 @@
+uuid: e9c5185a-60e9-49bf-b9f1-778db0aa91ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feature.field_description
+    - field.field.paragraph.feature.field_image
+    - field.field.paragraph.feature.field_label
+    - field.field.paragraph.feature.field_value
+    - paragraphs.paragraphs_type.feature
+_core:
+  default_config_hash: DMUk9nncCPdejfCrfeFxtLmfcP_qcUaIYP1cZpv8GBM
+id: paragraph.feature.default
+targetEntityType: paragraph
+bundle: feature
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_label:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_value:
+    weight: 0
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+hidden:
+  search_api_excerpt: true

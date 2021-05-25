@@ -1,0 +1,323 @@
+taxonomies:
+  block_position:
+    -
+      vid: block_position
+      tid: '1'
+      langcode: en
+      name: 'Central column'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 04b5c5b3-d35a-4ee3-90ab-d255e47a779f
+      field_css_class:
+        -
+          value: position--center
+    -
+      vid: block_position
+      tid: '2'
+      langcode: en
+      name: 'Extend to left margin'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 780cc6e4-1ad1-4941-a5ed-8cafef78ba76
+      field_css_class:
+        -
+          value: position--full-bleed-left
+    -
+      vid: block_position
+      tid: '3'
+      langcode: en
+      name: 'Extend to right margin'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 4b27b250-b85a-4a64-aaf7-4fae5868b7e1
+      field_css_class:
+        -
+          value: position--full-bleed-right
+    -
+      vid: block_position
+      tid: '5'
+      langcode: en
+      name: 'Full screen'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 7ada8abf-13fe-4230-a3ad-6fe1a52bacd6
+      field_css_class:
+        -
+          value: position--full-screen
+    -
+      vid: block_position
+      tid: '4'
+      langcode: en
+      name: 'Full width'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: dfdb1ed8-4477-414e-afb6-b198cc5af68f
+      field_css_class:
+        -
+          value: position--full-bleed
+    -
+      vid: block_position
+      tid: '6'
+      langcode: en
+      name: 'Page width'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 9260570b-2e7e-411c-b694-a0d0da8e49e1
+      field_css_class:
+        -
+          value: position--page-width
+  block_styles:
+    -
+      vid: block_styles
+      tid: '17'
+      langcode: en
+      name: 'Gradient fill'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 42b69bb4-a16b-4626-a701-b99bcaadea85
+      field_css_class:
+        -
+          value: block-style--gradient-fill
+  colors:
+    -
+      vid: colors
+      tid: '7'
+      langcode: en
+      name: Black
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 8ee0288b-072a-4620-8fed-0fefd90e64f5
+      field_css_class:
+        -
+          value: black
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '8'
+      langcode: en
+      name: Blue
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: ed6aab5d-4588-48b4-b879-7ff0abaeee5a
+      field_css_class:
+        -
+          value: blue
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '9'
+      langcode: en
+      name: Gray
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: fb2a77b3-f172-4882-ad6f-7e8d0af3fb67
+      field_css_class:
+        -
+          value: gray
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '10'
+      langcode: en
+      name: Green
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: aaa41bdd-55e5-4bf8-ad06-bcae9f8a7e75
+      field_css_class:
+        -
+          value: green
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '11'
+      langcode: en
+      name: Orange
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 347f1488-9662-4e6b-9137-ee823b42f6b9
+      field_css_class:
+        -
+          value: orange
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '12'
+      langcode: en
+      name: Purple
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: cf0a132b-0b25-45bc-b86c-99b650070905
+      field_css_class:
+        -
+          value: purple
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '13'
+      langcode: en
+      name: Red
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 40b4cbb7-b606-41e2-905d-4444a7dd272b
+      field_css_class:
+        -
+          value: red
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '14'
+      langcode: en
+      name: Transparent
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: f1c827af-921c-4b91-8277-9890ab4801b5
+      field_css_class:
+        -
+          value: transparent
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '15'
+      langcode: en
+      name: White
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 30ed2d26-1897-4968-856a-7a66693de15e
+      field_css_class:
+        -
+          value: white
+      field_negative_text:
+        -
+          value: '0'
+    -
+      vid: colors
+      tid: '16'
+      langcode: en
+      name: Yellow
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 4feb2845-30c8-462b-b7f3-3a6c9e209b0f
+      field_css_class:
+        -
+          value: yellow
+      field_negative_text:
+        -
+          value: '0'
+blocks:
+  -
+    info: 'View case study intro'
+    langcode: en
+    uuid: 78d955f7-e708-4e2b-8081-56de821ea762
+    bundle: paragraphs_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_body: {  }
+  -
+    info: 'View maps intro'
+    langcode: en
+    uuid: 65c97d68-46e8-42ff-94cc-b31e1e2820a9
+    bundle: paragraphs_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_body:
+        -
+          target_id: '72'
+          target_revision_id: '72'
+  -
+    info: 'Home paragraph block'
+    langcode: en
+    uuid: d0080afd-217e-4e63-ae31-5ee33a2b637e
+    bundle: paragraphs_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_body: {  }
+  -
+    info: 'Footer block'
+    langcode: en
+    uuid: 498a51b0-4559-4992-8fc5-dbb1c655cb27
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<div class=\"align-center\">\r\n<p>The Rangelands Atlas is the output of a collaboration between</p>\r\n</div>\r\n\r\n<div class=\"footer--logos\">\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"523f4bde-2338-4839-a231-dbc9925d98c8\"></drupal-media>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"5f4ef868-be1c-4429-acde-0c63e089a2c2\"></drupal-media>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"0be249f0-bae2-4dab-9c2d-5c9440b48bd1\"></drupal-media>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"d0e367aa-9ab8-4e11-beec-af5727b4aa3e\"></drupal-media>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"635b8b36-3d7a-411a-bbcd-a9bc5730e5eb\" data-view-mode=\"\"></drupal-media>\r\n</div>\r\n"
+          summary: ''
+          format: full_html
+  -
+    info: 'Home page intro'
+    langcode: en
+    uuid: 4fc84206-8eb7-49ea-ae21-203cd5b46ff5
+    bundle: paragraphs_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_body:
+        -
+          target_id: '1'
+          target_revision_id: '1'
+  -
+    info: 'Hero Map'
+    langcode: en
+    uuid: bedaf52d-fa05-4a4a-bfca-dc891ff6b603
+    bundle: image
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body: {  }
+      field_image:
+        -
+          target_id: '1'

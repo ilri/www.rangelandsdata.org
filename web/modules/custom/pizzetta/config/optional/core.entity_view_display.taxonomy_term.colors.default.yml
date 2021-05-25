@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.colors.field_css_class
+    - field.field.taxonomy_term.colors.field_negative_text
+    - taxonomy.vocabulary.colors
+  module:
+    - text
+id: taxonomy_term.colors.default
+targetEntityType: taxonomy_term
+bundle: colors
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_css_class:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_negative_text:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

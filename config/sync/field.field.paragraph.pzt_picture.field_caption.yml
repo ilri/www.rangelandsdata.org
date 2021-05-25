@@ -1,0 +1,23 @@
+uuid: cca93de4-9222-43c7-82cd-000ca2951f23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_caption
+    - paragraphs.paragraphs_type.pzt_picture
+  module:
+    - text
+_core:
+  default_config_hash: mJYxK3IVRMpr03ZvNVClVXopcPZfUmLviI62S1PEkIc
+id: paragraph.pzt_picture.field_caption
+field_name: field_caption
+entity_type: paragraph
+bundle: pzt_picture
+label: Caption
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

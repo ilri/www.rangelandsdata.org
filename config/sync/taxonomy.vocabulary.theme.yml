@@ -1,0 +1,10 @@
+uuid: 19a9a785-82a6-4b52-97d8-e1ae3e69e3ce
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: PqeAunPAamKoPER6HztkpSyCXaSUvmxd2n40HFBJWJQ
+name: Theme
+vid: theme
+description: ''
+weight: -9

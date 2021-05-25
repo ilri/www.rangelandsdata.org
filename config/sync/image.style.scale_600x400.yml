@@ -1,0 +1,25 @@
+uuid: b7f1f39c-7a1d-41f9-ae2c-574b6da723c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.600x400
+  module:
+    - crop
+name: scale_600x400
+label: scale_600x400
+effects:
+  7e566803-ea86-4f4d-97a5-3726a6f3676a:
+    uuid: 7e566803-ea86-4f4d-97a5-3726a6f3676a
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: 600x400
+  fdbf26c6-3dd4-4471-b423-5d87b5a3adb4:
+    uuid: fdbf26c6-3dd4-4471-b423-5d87b5a3adb4
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

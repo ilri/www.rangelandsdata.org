@@ -1,0 +1,22 @@
+uuid: ec410ea0-da77-4fd0-aa7f-da3ad697d67e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  abstract: 'This Atlas has been developed to document this value and highlight the changes produced by climate change, investments, land use, and conversion trends.'
+  canonical_url: '[site:url]'
+  description: "Rangelands are areas where wildlife and livestock can graze grasses, plants, shrubs, trees.\r\nRangelands have enormous environmental, economic and social value."
+  image_src: '[site:url]sites/default/files/styles/scale_1920/public/images/home-map.jpg'
+  shortlink: '[site:url]'
+  title: 'Home page | [site:name]'
+  og_description: "Rangelands are areas where wildlife and livestock can graze grasses, plants, shrubs, trees.\r\nThis Atlas has been developed to document this value and highlight the changes produced by climate change, investments, land use, and conversion trends."
+  og_image: '[site:url]sites/default/files/styles/scale_1920/public/images/home-map.jpg'
+  og_url: '[site:url]'
+  twitter_cards_image: '[site:url]sites/default/files/styles/scale_1920/public/images/home-map.jpg'
+  twitter_cards_page_url: '[site:url]'
+  twitter_cards_title: '[site:name]'
+  twitter_cards_type: summary_large_image

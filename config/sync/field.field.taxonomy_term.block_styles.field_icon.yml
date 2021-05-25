@@ -1,0 +1,38 @@
+uuid: fa0d57a7-a5cf-4efa-85a4-efc9fc0195ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icon
+    - media.type.image
+    - media.type.svg
+    - taxonomy.vocabulary.block_styles
+  module:
+    - composite_reference
+third_party_settings:
+  composite_reference:
+    composite: false
+_core:
+  default_config_hash: GaqOotyOSUVq2Yp2nturONjrndHmyTpDnBvMNK4IeYc
+id: taxonomy_term.block_styles.field_icon
+field_name: field_icon
+entity_type: taxonomy_term
+bundle: block_styles
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      svg: svg
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

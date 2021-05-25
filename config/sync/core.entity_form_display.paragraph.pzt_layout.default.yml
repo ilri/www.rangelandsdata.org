@@ -1,0 +1,26 @@
+uuid: 53f797a8-a34a-46d5-b551-7ec7b7593c2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_layout.field_pizzetta_settings
+    - paragraphs.paragraphs_type.pzt_layout
+  module:
+    - pizzetta
+_core:
+  default_config_hash: D4AOeDAcZwUcD3ckTPrZjtYqDCz6hQb73S2ik3VrVZE
+id: paragraph.pzt_layout.default
+targetEntityType: paragraph
+bundle: pzt_layout
+mode: default
+content:
+  field_pizzetta_settings:
+    weight: 0
+    settings:
+      open: false
+    third_party_settings: {  }
+    type: pizzetta_settings_widget
+    region: content
+hidden:
+  created: true
+  status: true

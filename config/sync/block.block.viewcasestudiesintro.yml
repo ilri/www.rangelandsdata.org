@@ -1,0 +1,30 @@
+uuid: 84ad4357-b2f3-4061-86d5-7681971ef6e3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:paragraphs_block:78d955f7-e708-4e2b-8081-56de821ea762'
+  module:
+    - block_content
+    - system
+  theme:
+    - rangelands
+id: viewcasestudiesintro
+theme: rangelands
+region: content_top
+weight: 0
+provider: null
+plugin: 'block_content:78d955f7-e708-4e2b-8081-56de821ea762'
+settings:
+  id: 'block_content:78d955f7-e708-4e2b-8081-56de821ea762'
+  label: 'View case studies intro'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /case-studies
+    negate: false

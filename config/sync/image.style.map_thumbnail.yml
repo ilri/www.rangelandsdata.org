@@ -1,0 +1,25 @@
+uuid: a57cdee1-07de-49ab-84c5-63deb8200463
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.map_large
+  module:
+    - crop
+name: map_thumbnail
+label: 'map thumbnail'
+effects:
+  9ae2e82f-dff6-4047-831e-5ecd99d9219a:
+    uuid: 9ae2e82f-dff6-4047-831e-5ecd99d9219a
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: map_large
+  36a0e9aa-099d-418c-9b2c-d8f8cfc386bb:
+    uuid: 36a0e9aa-099d-418c-9b2c-d8f8cfc386bb
+    id: image_scale
+    weight: 2
+    data:
+      width: 450
+      height: null
+      upscale: false

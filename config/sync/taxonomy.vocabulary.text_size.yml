@@ -1,0 +1,10 @@
+uuid: 9ef12205-8ac7-4643-892e-a38dd4954173
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mMXAK8uahA6LOQykdogWix-TqbLhi8a5TDMZJ8XhjOk
+name: 'Text size'
+vid: text_size
+description: ''
+weight: 5

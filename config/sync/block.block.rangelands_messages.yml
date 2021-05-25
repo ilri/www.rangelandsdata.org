@@ -1,0 +1,22 @@
+uuid: 7938e667-b111-4843-8bd6-f7f1e9361871
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rangelands
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: rangelands_messages
+theme: rangelands
+region: help
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 785f253a-3535-4b07-af65-4abdd14ee9f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.pzt_picture
+_core:
+  default_config_hash: 0FtuI-mfakUs2_NcJxyYmRsMu6DAyVkuoPSsFXikflI
+id: paragraph.pzt_picture.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: pzt_picture
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

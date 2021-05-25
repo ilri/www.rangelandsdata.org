@@ -1,0 +1,38 @@
+uuid: 87356334-00e0-43df-9959-4f1728fbb203
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_size
+    - paragraphs.paragraphs_type.pzt_text_block
+    - taxonomy.vocabulary.text_size
+  module:
+    - composite_reference
+third_party_settings:
+  composite_reference:
+    composite: false
+_core:
+  default_config_hash: fbl-wKQhBK5p5kU6m_O7gYId_Cjas5cCmn0AwIJaftI
+id: paragraph.pzt_text_block.field_text_size
+field_name: field_text_size
+entity_type: paragraph
+bundle: pzt_text_block
+label: 'Text size'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 9cb37327-dc37-4503-ab9c-4f7e83dab4d5
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      text_size: text_size
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

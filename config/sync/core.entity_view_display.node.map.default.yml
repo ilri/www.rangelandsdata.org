@@ -1,0 +1,58 @@
+uuid: 3f1ad880-2c31-4164-be79-43923a43830f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.map.field_body
+    - field.field.node.map.field_header_image
+    - field.field.node.map.field_maps
+    - field.field.node.map.field_metatags
+    - field.field.node.map.field_related_content
+    - node.type.map
+  module:
+    - entity_reference_revisions
+    - layout_paragraphs
+    - metatag
+    - user
+id: node.map.default
+targetEntityType: node
+bundle: map
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: layout_paragraphs
+    region: content
+  field_maps:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_metatags:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_related_content:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: related
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_header_image: true
+  links: true

@@ -1,0 +1,72 @@
+uuid: d3d716f1-0d40-4e8c-9e5b-4016ba8c4016
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_picture_gallery.field_caption
+    - field.field.paragraph.pzt_picture_gallery.field_images
+    - field.field.paragraph.pzt_picture_gallery.field_pizzetta_settings
+    - field.field.paragraph.pzt_picture_gallery.field_title
+    - paragraphs.paragraphs_type.pzt_picture_gallery
+  module:
+    - text
+_core:
+  default_config_hash: Yli0sTiwObnEb_qBqsDyM6-WK_z5zriCcZOeCRSxo2o
+id: paragraph.pzt_picture_gallery.default
+targetEntityType: paragraph
+bundle: pzt_picture_gallery
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_images:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_background_color: true
+  field_background_image_opacity: true
+  field_block_position: true
+  field_custom_css_style: true
+  field_fixed_background: true
+  field_hide_title: true
+  field_internal_padding_bottom: true
+  field_internal_padding_left: true
+  field_internal_padding_right: true
+  field_internal_padding_top: true
+  field_margin_bottom: true
+  field_margin_left: true
+  field_margin_right: true
+  field_margin_top: true
+  field_negative: true
+  field_pizzetta_settings: true
+  field_show_title_in_side_menu: true
+  field_title_level: true
+  search_api_excerpt: true

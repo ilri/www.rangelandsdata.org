@@ -1,0 +1,14 @@
+uuid: 6cc787d2-e90e-4a68-94eb-a7f6e6878bfd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:9d0b7505-667f-4ff9-8e2d-78120986580d'
+_core:
+  default_config_hash: K93OCgeoZH5ZN2_2PDQ6BNjM1NVL5jqBGb9PAHlbD9c
+id: pzt_downloads
+label: Downloads
+icon_uuid: 9d0b7505-667f-4ff9-8e2d-78120986580d
+icon_default: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgODAiPjxwYXRoIGQ9Ik0zNS4wMDksNDkuOTkyLDYwLDI1czIuNS0yLjUsNSwwLDAsNSwwLDVMNDAuMDA4LDU0Ljk5MXMtNSw1LTEwLDAsMC0xMCwwLTEwTDU1LDIwczcuNS03LjUsMTUsMCwwLDE1LDAsMTVMNDUuMDA3LDU5Ljk4OSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg=='
+description: ''
+behavior_plugins: {  }

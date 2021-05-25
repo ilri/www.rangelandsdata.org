@@ -1,0 +1,174 @@
+uuid: 2cf1dd89-962f-4380-b0fa-95165bfbf747
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_video.field_caption
+    - field.field.paragraph.pzt_video.field_pizzetta_settings
+    - field.field.paragraph.pzt_video.field_title
+    - field.field.paragraph.pzt_video.field_video
+    - paragraphs.paragraphs_type.pzt_video
+  module:
+    - media_library
+    - pizzetta
+    - text
+_core:
+  default_config_hash: 8ryZAVsuv_e92NKIBM83pjpQkxe6wPfsjA1459DDIXk
+id: paragraph.pzt_video.default
+targetEntityType: paragraph
+bundle: pzt_video
+mode: default
+content:
+  field_background_color:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_background_image:
+    weight: 10
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_background_image_opacity:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_block_position:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_caption:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_custom_css_style:
+    weight: 17
+    settings:
+      size: 25
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_fixed_background:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_hide_title:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_internal_padding_bottom:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_internal_padding_left:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_internal_padding_right:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_internal_padding_top:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_margin_bottom:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_margin_left:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_margin_right:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_margin_top:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_negative:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_pizzetta_settings:
+    weight: 0
+    settings:
+      open: false
+    third_party_settings: {  }
+    type: pizzetta_settings_widget
+    region: content
+  field_show_title_in_side_menu:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_level:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_video:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

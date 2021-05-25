@@ -1,0 +1,59 @@
+<?php
+
+function rangelands_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook){
+
+  $element = $variables["elements"];
+  $uuid = $element["#derivative_plugin_id"];
+  if($uuid && $block = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid)){
+
+    $suggestions[] = 'block__type_' . $block->bundle();
+    $suggestions[] = 'block__type_' . $block->bundle() . '__' . $block->id();
+  }
+
+}
+
+function rangelands_preprocess_image(&$variables) {
+  if($variables['uri']){
+    $file_path = file_create_url($variables['uri']);
+    if(file_exists($variables['uri'])){
+      $variables['file_exist'] = true;
+    }
+  }
+}
+
+
+function rangelands_theme_suggestions_container_alter(array &$suggestions, array &$variables, $hook) {
+
+  if(isset($variables["element"]['#type']) && !empty($variables["element"]["#type"])) {
+    $suggestions[] = "container__" . $variables["element"]['#type'];
+  }
+  if(isset($variables["element"]['#id']) && !empty($variables["element"]["#id"])){
+    $suggestions[] = "container__" . $variables["element"]['#id'];
+  }
+}
+
+function rangelands_page_attachments_alter(array &$attachments) {
+  // Trim all meta tags to a max of 300 characters.
+  if (!empty($attachments['#attached']['html_head'])) {
+    // Adjust this as needed.
+    $max_length = 250;
+    foreach ($attachments['#attached']['html_head'] as &$tag) {
+      // Only process meta tags with a 'content' attribute, that way it will
+      // exclude LINK tags or meta tags which do not have a "content" value.
+      if (isset($tag[0]['#tag']) && $tag[0]['#tag'] == 'meta') {
+        if (isset($tag[0]['#attributes']['content'])) {
+          if (!is_string($tag[0]['#attributes']['content'])) {
+            $tag[0]['#attributes']['content'] = (string) $tag[0]['#attributes']['content'];
+          }
+          if (strlen($tag[0]['#attributes']['content']) > $max_length) {
+            // Trim the string three characters shorter than the max so that
+            // there is room for the elipses.
+            $string = wordwrap($tag[0]['#attributes']['content'], ($max_length - 3));
+            $string = explode("\n", $string);
+            $tag[0]['#attributes']['content'] = $string[0] . '...';
+          }
+        }
+      }
+    }
+  }
+}

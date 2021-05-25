@@ -1,0 +1,64 @@
+uuid: 5ccb589d-ab1f-4e37-9ea9-f1dcc7913975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pzt_text_block.field_body
+    - field.field.paragraph.pzt_text_block.field_pizzetta_settings
+    - field.field.paragraph.pzt_text_block.field_text_alignment
+    - field.field.paragraph.pzt_text_block.field_text_size
+    - field.field.paragraph.pzt_text_block.field_title
+    - paragraphs.paragraphs_type.pzt_text_block
+  module:
+    - pizzetta
+    - text
+_core:
+  default_config_hash: w5hOuoxfJG-F12tKUnrOMY6z1QIyNRdoR9V83gTuciE
+id: paragraph.pzt_text_block.default
+targetEntityType: paragraph
+bundle: pzt_text_block
+mode: default
+content:
+  field_body:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_pizzetta_settings:
+    weight: 0
+    settings:
+      open: false
+    third_party_settings: {  }
+    type: pizzetta_settings_widget
+    region: content
+  field_text_alignment:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_size:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

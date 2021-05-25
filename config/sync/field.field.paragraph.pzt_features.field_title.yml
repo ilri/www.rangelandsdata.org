@@ -1,0 +1,21 @@
+uuid: 0cab3573-61f4-498b-95a4-a4906f11ee5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.pzt_features
+_core:
+  default_config_hash: ATMdnuWvacIjRj5czZXBKdPO07StLbEXSMqVa3hqHhs
+id: paragraph.pzt_features.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: pzt_features
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

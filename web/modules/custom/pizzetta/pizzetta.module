@@ -1,0 +1,244 @@
+<?php
+
+use Drupal\Core\Template\Attribute;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Prepared variables for paragraph output:
+ */
+function pizzetta_preprocess_paragraph(&$variables) {
+  // Create classes from paragraph_settings field
+  if (!empty($variables['paragraph'])) {
+    $paragraph = $variables['paragraph'];
+    $parentEntity = $paragraph->getParentEntity();
+
+    $variables['attributes'] = new Attribute(isset($variables['attributes']) ? $variables['attributes'] : array());
+
+    if ($paragraph->hasField('field_pizzetta_settings')) {
+      if ($paragraph->get('field_pizzetta_settings')
+          ->getFieldDefinition()
+          ->getType() == 'pizzetta_settings') {
+        $paragraphSettingsArray = $paragraph->get('field_pizzetta_settings')->getValue();
+        if (!empty($paragraphSettingsArray[0])) {
+          $ps = $paragraphSettingsArray[0];
+          $attribute_style = '';
+          $taxonomy_terms = _pizzetta_preprocess_paragraph_load_taxonomy($ps);
+
+          switch($paragraph->bundle()) {
+            case 'pzt_text_block': $component_type = 'text'; break;
+            case 'pzt_picture':
+            case 'pzt_video': $component_type = 'figure'; break;
+            case 'pzt_landing_page_header': $component_type = 'landing_page_header'; break;
+            case 'pzt_picture_gallery': $component_type = 'gallery'; break;
+            case 'pzt_articles':
+            case 'pzt_terms': $component_type = 'cards_list'; break;
+            case 'pzt_layout': $component_type = 'layout'; break;
+            default:
+              $component_type = $paragraph->bundle();
+          }
+
+          $variables['attributes']->addClass('component');
+          $variables['attributes']->addClass('component-type--' . Html::getClass($component_type));
+          $variables['attributes']->addClass('component--view-mode--' . Html::getClass($variables['view_mode']));
+
+          if (!empty($ps['block_position']) && isset($taxonomy_terms[$ps['block_position']])) {
+            $variables['attributes']->addClass($taxonomy_terms[$ps['block_position']]->field_css_class->value);
+          }
+          if (!empty($ps['negative']) && $ps['negative'] == 1) {
+            $variables['attributes']->addClass('negative');
+          }
+          if (!empty($ps['background_fixed']) && $ps['background_fixed'] == 1) {
+            $variables['attributes']->addClass('background-fixed');
+          }
+
+          $distance_directions = pizzetta_get_distance_directions();
+          //padding
+          foreach($distance_directions as $direction) {
+            $key = 'internal_padding_' . $direction;
+            if (!empty($ps[$key])) {
+              $padding_class = _pizzetta_preprocess_paragraph_distance_option_class('padding', $direction, $ps[$key]);
+              $variables['attributes']->addClass($padding_class);
+            }
+          }
+          //padding
+          foreach($distance_directions as $direction) {
+            $key = 'margin_' . $direction;
+            if (!empty($ps[$key])) {
+              $margin_class = _pizzetta_preprocess_paragraph_distance_option_class('margin', $direction, $ps[$key]);
+              $variables['attributes']->addClass($margin_class);
+            }
+          }
+
+          if (!empty($ps['background_image_opacity'])) {
+            $ps['background_image_opacity'] /= 100;
+          }
+          if (!empty($ps['background_image']) && is_numeric($ps['background_image'])) {
+            $file = \Drupal::entityTypeManager()->getStorage('media')->load($ps['background_image']);
+            $ps['background_image'] = [
+              'media_id' => $ps['background_image'],
+              'entity' => $file
+            ];
+          }
+          if(!empty($ps['background_color']) && $ps['background_color'] > 0){
+            $background_term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($ps['background_color']);
+            $ps['background_color'] = $background_term->field_css_class->value;
+            $attribute_style .= 'background-color:' . $ps['background_color'] . ';';
+          }
+          if(!empty($ps['css_id'])) {
+            $variables['attributes']->setAttribute('id',$ps['css_id']);
+          }
+          if(!empty($ps['css_classes'])) {
+            $variables['attributes']->addClass($ps['css_classes']);
+          }
+          if(!empty($ps['css_style'])) {
+            $attribute_style .= str_replace(array("\r", "\n"), '', $ps['css_style']);
+          }
+          if(!empty($ps['block_styles'])) {
+            $styles = unserialize($ps['block_styles']);
+            foreach($styles as $t) {
+              if(isset($taxonomy_terms[$t])) {
+                $term = $taxonomy_terms[$t];
+                $variables['attributes']->addClass($term->field_css_class->value);
+              }
+            }
+          }
+          if(!empty($ps['custom_attributes'])) {
+            $custom_attributes = explode("\n", $ps['custom_attributes']);
+            foreach($custom_attributes as $attr) {
+              $attr = trim($attr);
+              if(!empty($attr)) {
+                list($k,$v) = explode('=',$attr,2);
+                if(!empty($k)) {
+                  $v = trim($v, '"\'');
+                  $variables['attributes']->setAttribute($k,$v);
+                }
+              }
+            }
+          }
+          if(!empty($attribute_style)) {
+            $variables['attributes']->setAttribute('style', $attribute_style);
+          }
+
+          $variables['pizzetta_settings'] = $ps;
+        }
+      }
+    }
+  }
+}
+
+function pizzetta_get_distance_directions() {
+  return [
+    'top' => 'top',
+    'right' => 'right',
+    'bottom' => 'bottom',
+    'left' => 'left',
+  ];
+}
+
+function _pizzetta_preprocess_paragraph_distance_option_class($type = 'padding', $direction = 'top', $value = '') {
+  $class = '';
+  $class .= substr($type,0,3) . '-';
+  $class .= substr($direction,0,1);
+  switch($value) {
+    case 'single': $class .= ''; break;
+    case 'half': $class .= 'h'; break;
+    case 'double': $class .= '2'; break;
+    case 'triple': $class .= '3'; break;
+  }
+
+  return $class;
+}
+
+function _pizzetta_preprocess_paragraph_load_taxonomy($ps) {
+  $tids = [];
+  if (!empty($ps['block_position']) && is_numeric($ps['block_position'])) {
+    $tids[] = $ps['block_position'];
+  }
+  if (!empty($ps['block_styles'])) {
+    $styles = unserialize($ps['block_styles']);
+    foreach ($styles as $s) {
+      $tids[] = $s;
+    }
+  }
+
+  $taxonomy_terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadMultiple($tids);
+  return $taxonomy_terms;
+}
+
+/**
+ * Implements HOOK_theme_suggestions_HOOK_alter
+ */
+function pizzetta_theme_suggestions_paragraph_alter(&$suggestions, $variables) {
+  $entity = $variables['elements']['#paragraph'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  $type = $entity->getType();
+
+  $drowl_paragraphs_suggestions = [];
+  $drowl_paragraphs_suggestions[] = 'paragraph__pizzetta';
+  $drowl_paragraphs_suggestions[] = 'paragraph__pizzetta__' . $type;
+  $drowl_paragraphs_suggestions[] = 'paragraph__pizzetta__' . $type . '__' . $sanitized_view_mode;
+
+  // Our override should be more general than the theme suggestion:
+  $suggestions = array_merge($drowl_paragraphs_suggestions, $suggestions);
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pizzetta_theme($existing, $type, $theme, $path) {
+  $templates = $path . '/templates';
+  return [
+    'paragraph__pizzetta' => [
+      'base hook' => 'paragraph',
+      'path' => $templates
+    ],
+    'paragraph__pizzetta__pzt_text_block' => [
+      'base hook' => 'paragraph',
+      'path' => $templates
+    ],
+    'paragraph__pizzetta__pzt_picture' => [
+      'base hook' => 'paragraph',
+      'path' => $templates
+    ],
+    'paragraph__pizzetta__pzt_video' => [
+      'base hook' => 'paragraph',
+      'path' => $templates
+    ],
+    'paragraph__pizzetta__pzt_articles' => [
+      'base hook' => 'paragraph',
+      'path' => $templates
+    ],
+    'paragraph__pizzetta__pzt_terms' => [
+      'base hook' => 'paragraph',
+      'path' => $templates
+    ],
+    'paragraph__pizzetta__pzt_picture_gallery' => [
+      'base hook' => 'paragraph',
+      'path' => $templates
+    ],
+    'paragraph__pizzetta__pzt_layout' => [
+      'base hook' => 'paragraph',
+      'path' => $templates
+    ],
+  ];
+}
+
+
+function pizzetta_test() {
+  $paragraphs = \Drupal::entityTypeManager()->getStorage('paragraph')->loadMultiple();
+  foreach($paragraphs as $p) {
+    if(substr($p->bundle(),0,3) == 'pzt') {
+      if(!$p->field_title) {
+        return false;
+      }
+    }
+    if($p->field_pizzetta_settings && !(empty($p->field_pizzetta_settings->title))) {
+      if($p->field_title && empty($p->field_title->value)) {
+        $title = $p->field_pizzetta_settings->title;
+        $p->set('field_title', $title);
+        $p->save();
+      }
+    }
+  }
+}
+

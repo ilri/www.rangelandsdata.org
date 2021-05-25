@@ -1,0 +1,6 @@
+
+services:
+  custom_twig_extension.filter:
+    class: Drupal\custom_twig_extension\TwigFilterExtension
+    tags:
+      - { name: twig.extension }

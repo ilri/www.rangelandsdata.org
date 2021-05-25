@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:6155aa03-8571-4f35-9987-be01b6e397ed'
+id: pzt_video
+label: Video
+icon_uuid: 6155aa03-8571-4f35-9987-be01b6e397ed
+icon_default: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgODAiPjxwYXRoIGQ9Ik05NywzVjc3SDNWM0g5N20zLTNIMFY4MEgxMDBWMFoiLz48cG9seWdvbiBwb2ludHM9IjQwIDIwIDcwIDQwIDQwIDYwIDQwIDIwIi8+PC9zdmc+'
+description: ''
+behavior_plugins: {  }

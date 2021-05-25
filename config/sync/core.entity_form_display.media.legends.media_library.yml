@@ -1,0 +1,30 @@
+uuid: 134f0f52-57bb-497b-93db-a2a026f276e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.legends.field_media_image
+    - image.style.thumbnail
+    - media.type.legends
+  module:
+    - svg_image
+id: media.legends.media_library
+targetEntityType: media
+bundle: legends
+mode: media_library
+content:
+  field_media_image:
+    weight: -50
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  name: true
+  path: true
+  status: true
+  uid: true

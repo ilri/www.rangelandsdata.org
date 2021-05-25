@@ -1,0 +1,27 @@
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+  label_display == 'inline' ? 'clearfix',
+]
+%}
+{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+{% if label_hidden %}
+  {% for item in items %}
+    {{- item.content -}}
+    {{- not loop.last ? ', ' -}}
+  {% endfor %}
+{% else %}
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  {% for item in items %}
+    {{- item.content -}}
+    {{- not loop.last ? ', ' -}}
+  {% endfor %}
+{% endif %}

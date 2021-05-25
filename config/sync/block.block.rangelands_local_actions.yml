@@ -1,0 +1,20 @@
+uuid: f19f5216-cf72-489d-8a49-2b8a54943ef6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rangelands
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: rangelands_local_actions
+theme: rangelands
+region: content_top
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

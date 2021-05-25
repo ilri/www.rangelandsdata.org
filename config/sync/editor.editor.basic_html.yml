@@ -33,23 +33,39 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
         -
           name: Tools
           items:
             - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
+    acrconfig:
+      ckeditor_acr_config: 'span[!class]{*}(*)'
+    codemirror:
+      enable: true
+      startupMode: wysiwyg
+      mode: htmlmixed
+      theme: default
+      options:
+        lineNumbers: true
+        lineWrapping: true
+        matchBrackets: true
+        autoCloseTags: true
+        autoCloseBrackets: true
+        enableSearchTools: true
+        enableCodeFolding: true
+        enableCodeFormatting: true
+        autoFormatOnStart: true
+        autoFormatOnModeChange: true
+        autoFormatOnUncomment: true
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

@@ -1,0 +1,589 @@
+<?php
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\Component\Utility\NestedArray;
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Implements hook_install().
+ */
+function pizzetta_install($is_syncing) {
+  pizzetta_install_create_terms_block_position();
+  pizzetta_install_create_terms_colors();
+  pizzetta_install_create_terms_block_styles();
+}
+
+/**
+ * Add further columns: block_position
+ */
+function pizzetta_update_8001() {
+  $field_type = 'pizzetta_settings';
+  $columns_to_add = ['block_position'];
+  pizzetta_install_create_terms_block_position();
+
+  return _field_type_schema_column_add_helper($field_type, $columns_to_add);
+}
+
+/**
+ * Add further columns: negative, internal paddings, margins
+ */
+function pizzetta_update_8002() {
+  $field_type = 'pizzetta_settings';
+  $columns_to_add = [
+    'negative',
+    'internal_padding_top',
+    'internal_padding_right',
+    'internal_padding_bottom',
+    'internal_padding_left',
+    'margin_top',
+    'margin_right',
+    'margin_bottom',
+    'margin_left',
+  ];
+  return _field_type_schema_column_add_helper($field_type, $columns_to_add);
+}
+
+/**
+ * Add further columns: background_color, background_image_opacity
+ */
+function pizzetta_update_8003() {
+  $field_type = 'pizzetta_settings';
+  $columns_to_add = ['background_color','background_image_opacity'];
+  pizzetta_install_create_terms_colors();
+  return _field_type_schema_column_add_helper($field_type, $columns_to_add);
+}
+
+/**
+ * Add further columns: background_image
+ */
+function pizzetta_update_8004() {
+  $field_type = 'pizzetta_settings';
+  $columns_to_add = ['background_image'];
+  return _field_type_schema_column_add_helper($field_type, $columns_to_add);
+}
+
+/**
+ * Add further columns: background_image
+ */
+function pizzetta_update_8005() {
+  $field_type = 'pizzetta_settings';
+  $columns_to_add = ['background_fixed'];
+  return _field_type_schema_column_add_helper($field_type, $columns_to_add);
+}
+
+/**
+ * Add further columns: css_id, css_classes, css_style, block_styles
+ */
+function pizzetta_update_8006() {
+  $field_type = 'pizzetta_settings';
+  $columns_to_add = ['css_id',
+    'css_classes',
+    'css_style',
+    'block_styles',
+  ];
+  pizzetta_install_create_terms_block_styles();
+  return _field_type_schema_column_add_helper($field_type, $columns_to_add);
+}
+
+/**
+ * Add further columns: custom_attributes
+ */
+function pizzetta_update_8007() {
+  $field_type = 'pizzetta_settings';
+  $columns_to_add = ['custom_attributes'];
+  return _field_type_schema_column_add_helper($field_type, $columns_to_add);
+}
+
+/**
+ * Check if all pizzetta paragraphs have field_title
+ */
+function pizzetta_update_8008() {
+  $paragraphs = \Drupal::entityTypeManager()->getStorage('paragraph')->loadMultiple();
+  foreach($paragraphs as $p) {
+    if(substr($p->bundle(),0,3) == 'pzt') {
+      if(!$p->field_title) {
+        throw new \exception('Paragraph type ' . $p->bundle() . ' is missing field_title, cannot update');
+      }
+    }
+  }
+  return true;
+}
+
+/**
+ * Update all paragraphs: copy title values in with field_title
+ */
+function pizzetta_update_8009() {
+  $paragraphs = \Drupal::entityTypeManager()->getStorage('paragraph')->loadMultiple();
+
+  foreach($paragraphs as $p) {
+    if($p->field_pizzetta_settings && !(empty($p->field_pizzetta_settings->title))) {
+      if($p->field_title && empty($p->field_title->value)) {
+        $title = $p->field_pizzetta_settings->title;
+        $p->set('field_title', $title);
+        $p->save();
+      }
+    }
+  }
+  return true;
+}
+
+
+
+function pizzetta_install_create_terms_block_position() {
+  $vid = 'block_position';
+  $terms = [
+    [
+      'name' => 'Central column',
+      'field_css_class' => 'position--center',
+    ],
+    [
+      'name' => 'Extend to left margin',
+      'field_css_class' => 'position--full-bleed-left',
+    ],
+    [
+      'name' => 'Extend to right margin',
+      'field_css_class' => 'position--full-bleed-right',
+    ],
+    [
+      'name' => 'Full width',
+      'field_css_class' => 'position--full-bleed',
+    ],
+    [
+      'name' => 'Full screen',
+      'field_css_class' => 'position--full-screen',
+    ],
+    [
+      'name' => 'Page width',
+      'field_css_class' => 'position--page-width',
+    ],
+
+  ];
+
+  pizzetta_install_create_terms($vid, $terms);
+}
+
+function pizzetta_install_create_terms_block_styles() {
+  $vid = 'block_styles';
+  $terms = [
+    [
+      'name' => 'Gradient fill',
+      'field_css_class' => 'block-style--gradient-fill',
+    ],
+
+  ];
+
+  pizzetta_install_create_terms($vid, $terms);
+}
+
+function pizzetta_install_create_terms_colors() {
+  $vid = 'colors';
+  $colors = [
+    'black',
+    'blue',
+    'gray',
+    'green',
+    'orange',
+    'purple',
+    'red',
+    'transparent',
+    'white',
+    'yellow',
+  ];
+  foreach($colors as $color) {
+    $terms[] = [
+      'name' => ucwords($color),
+      'field_css_class' => $color,
+    ];
+  }
+
+  pizzetta_install_create_terms($vid, $terms);
+}
+
+function pizzetta_install_create_terms($vid, $terms) {
+  //check if there are taxonomy terms, if yes, skip the task.
+  $inserted_terms = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadTree($vid, 0, NULL, FALSE);
+  if(count($inserted_terms) > 0 ) {
+    return;
+  }
+
+  foreach($terms as $term) {
+    $term['vid'] = $vid;
+    \Drupal::entityTypeManager()->getStorage('taxonomy_term')->create($term)->save();
+  }
+}
+
+/**
+ * Helper function for HOOK_Update to add columns to the field schema.
+ *
+ * @param $field_type The field type id e.g. "drowl_paragraphs_settings"
+ * @param array $columns_to_add array of the column names from schema() function, e.g. ["style_textalign"]
+ */
+function _field_type_schema_column_add_helper($field_type, array $columns_to_add = array()) {
+  $processed_fields = [];
+  $field_type_manager = \Drupal::service('plugin.manager.field.field_type');
+  $field_definition = $field_type_manager->getDefinition($field_type);
+  $field_item_class = $field_definition['class'];
+
+  $schema = \Drupal::database()->schema();
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $entity_field_manager = \Drupal::service('entity_field.manager');
+  $entity_field_map = $entity_field_manager->getFieldMapByFieldType($field_type);
+  // The key-value collection for tracking installed storage schema.
+  $entity_storage_schema_sql = \Drupal::keyValue('entity.storage_schema.sql');
+  $entity_definitions_installed = \Drupal::keyValue('entity.definitions.installed');
+
+  foreach ($entity_field_map as $entity_type_id => $field_map) {
+    $entity_storage = $entity_type_manager->getStorage($entity_type_id);
+
+    // Only SQL storage based entities are supported / throw known exception.
+    //    if (!($entity_storage instanceof SqlContentEntityStorage)) {
+    //      continue;
+    //    }
+
+    $entity_type = $entity_type_manager->getDefinition($entity_type_id);
+    $field_storage_definitions = $entity_field_manager->getFieldStorageDefinitions($entity_type_id);
+    /** @var Drupal\Core\Entity\Sql\DefaultTableMapping $table_mapping */
+    $table_mapping = $entity_storage->getTableMapping($field_storage_definitions);
+    // Only need field storage definitions of address fields.
+    /** @var \Drupal\Core\Field\FieldStorageDefinitionInterface $field_storage_definition */
+    foreach (array_intersect_key($field_storage_definitions, $field_map) as $field_storage_definition) {
+      $field_name = $field_storage_definition->getName();
+      try {
+        $table = $table_mapping->getFieldTableName($field_name);
+      } catch (SqlContentEntityStorageException $e) {
+        // Custom storage? Broken site? No matter what, if there is no table
+        // or column, there's little we can do.
+        continue;
+      }
+      // See if the field has a revision table.
+      $revision_table = NULL;
+      if ($entity_type->isRevisionable() && $field_storage_definition->isRevisionable()) {
+        if ($table_mapping->requiresDedicatedTableStorage($field_storage_definition)) {
+          $revision_table = $table_mapping->getDedicatedRevisionTableName($field_storage_definition);
+        }
+        elseif ($table_mapping->allowsSharedTableStorage($field_storage_definition)) {
+          $revision_table = $entity_type->getRevisionDataTable() ?: $entity_type->getRevisionTable();
+        }
+      }
+      // Load the installed field schema so that it can be updated.
+      $schema_key = "$entity_type_id.field_schema_data.$field_name";
+      $field_schema_data = $entity_storage_schema_sql->get($schema_key);
+
+      $processed_fields[] = [$entity_type_id, $field_name];
+      // Loop over each new column and add it as a schema column change.
+      foreach ($columns_to_add as $column_id) {
+        $column = $table_mapping->getFieldColumnName($field_storage_definition, $column_id);
+        // Add `initial_from_field` to the new spec, as this will copy over
+        // the entire data.
+        $field_schema = $field_item_class::schema($field_storage_definition);
+        $spec = $field_schema['columns'][$column_id];
+
+        // Add the new column.
+        $schema->addField($table, $column, $spec);
+        if ($revision_table) {
+          $schema->addField($revision_table, $column, $spec);
+        }
+
+        // Add the new column to the installed field schema.
+        if ($field_schema_data) {
+          $field_schema_data[$table]['fields'][$column] = $field_schema['columns'][$column_id];
+          $field_schema_data[$table]['fields'][$column]['not null'] = FALSE;
+          if ($revision_table) {
+            $field_schema_data[$revision_table]['fields'][$column] = $field_schema['columns'][$column_id];
+            $field_schema_data[$revision_table]['fields'][$column]['not null'] = FALSE;
+          }
+        }
+      }
+
+      // Save changes to the installed field schema.
+      if ($field_schema_data) {
+        $recipient_column = $table_mapping->getFieldColumnName($field_storage_definition, 'recipient');
+        unset($field_schema_data[$table]['fields'][$recipient_column]);
+        if ($revision_table) {
+          unset($field_schema_data[$revision_table]['fields'][$recipient_column]);
+        }
+        $entity_storage_schema_sql->set($schema_key, $field_schema_data);
+      }
+      if ($table_mapping->allowsSharedTableStorage($field_storage_definition)) {
+        $key = "$entity_type_id.field_storage_definitions";
+        if ($definitions = $entity_definitions_installed->get($key)) {
+          $definitions[$field_name] = $field_storage_definition;
+          $entity_definitions_installed->set($key, $definitions);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Helper function for HOOK_Update to update the field schema columns.
+ * List the columns with changed schema values and the helper will handle
+ * the content migration and entity update for you.
+ *
+ * @param $field_type The field type id e.g. "drowl_paragraphs_settings"
+ * @param array $columns_to_add array of the column names from schema() function, e.g. ["style_textalign"]
+ */
+function _field_type_schema_column_spec_change_helper($field_type, $column) {
+  $processed_fields = [];
+  $field_type_manager = \Drupal::service('plugin.manager.field.field_type');
+  $field_definition = $field_type_manager->getDefinition($field_type);
+  $field_item_class = $field_definition['class'];
+
+  $schema = \Drupal::database()->schema();
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $entity_field_manager = \Drupal::service('entity_field.manager');
+  $entity_field_map = $entity_field_manager->getFieldMapByFieldType($field_type);
+  // The key-value collection for tracking installed storage schema.
+  $entity_storage_schema_sql = \Drupal::keyValue('entity.storage_schema.sql');
+  $entity_definitions_installed = \Drupal::keyValue('entity.definitions.installed');
+
+  foreach ($entity_field_map as $entity_type_id => $field_map) {
+    $entity_storage = $entity_type_manager->getStorage($entity_type_id);
+    $entity_type = $entity_type_manager->getDefinition($entity_type_id);
+    $field_storage_definitions = $entity_field_manager->getFieldStorageDefinitions($entity_type_id);
+    /** @var Drupal\Core\Entity\Sql\DefaultTableMapping $table_mapping */
+    $table_mapping = $entity_storage->getTableMapping($field_storage_definitions);
+    // Only need field storage definitions of address fields.
+    /** @var \Drupal\Core\Field\FieldStorageDefinitionInterface $field_storage_definition */
+    foreach (array_intersect_key($field_storage_definitions, $field_map) as $field_storage_definition) {
+      $field_name = $field_storage_definition->getName();
+      $tables = [];
+      try {
+        $table = $table_mapping->getFieldTableName($field_name);
+        $tables[] = $table;
+      } catch (SqlContentEntityStorageException $e) {
+        // Custom storage? Broken site? No matter what, if there is no table
+        // or column, there's little we can do.
+        continue;
+      }
+      // See if the field has a revision table.
+      $revision_table = NULL;
+      if ($entity_type->isRevisionable() && $field_storage_definition->isRevisionable()) {
+        if ($table_mapping->requiresDedicatedTableStorage($field_storage_definition)) {
+          $revision_table = $table_mapping->getDedicatedRevisionTableName($field_storage_definition);
+          $tables[] = $revision_table;
+        }
+        elseif ($table_mapping->allowsSharedTableStorage($field_storage_definition)) {
+          $revision_table = $entity_type->getRevisionDataTable() ?: $entity_type->getRevisionTable();
+          $tables[] = $revision_table;
+        }
+      }
+
+      $database = \Drupal::database();
+      $existing_data = [];
+      foreach ($tables as $table) {
+        // Get the old data.
+        $existing_data[$table] = $database->select($table)
+          ->fields($table)
+          ->execute()
+          ->fetchAll(PDO::FETCH_ASSOC);
+
+        // Wipe it.
+        $database->truncate($table)->execute();
+      }
+
+      $manager = \Drupal::entityDefinitionUpdateManager();
+      $manager->updateFieldStorageDefinition($manager->getFieldStorageDefinition($field_name, $entity_type_id));
+
+
+      // Restore the data.
+      foreach ($tables as $table) {
+        $insert_query = $database
+          ->insert($table)
+          ->fields(array_keys(end($existing_data[$table])));
+        foreach ($existing_data[$table] as $row) {
+          $insert_query->values(array_values($row));
+        }
+        $insert_query->execute();
+      }
+    }
+  }
+}
+
+/**
+ * Helper function for HOOK_Update to remove columns from the field schema.
+ *
+ * @param $field_type The field type id e.g. "drowl_paragraphs_settings"
+ * @param array $columns_to_remove array of the column names from schema() function, e.g. ["style_textalign"]
+ */
+function _field_type_schema_column_remove_helper($field_type, array $columns_to_remove = array()) {
+  $processed_fields = [];
+  $field_type_manager = \Drupal::service('plugin.manager.field.field_type');
+  $field_definition = $field_type_manager->getDefinition($field_type);
+  $field_item_class = $field_definition['class'];
+
+  $schema = \Drupal::database()->schema();
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $entity_field_manager = \Drupal::service('entity_field.manager');
+  $entity_field_map = $entity_field_manager->getFieldMapByFieldType($field_type);
+  // The key-value collection for tracking installed storage schema.
+  $entity_storage_schema_sql = \Drupal::keyValue('entity.storage_schema.sql');
+  $entity_definitions_installed = \Drupal::keyValue('entity.definitions.installed');
+
+  foreach ($entity_field_map as $entity_type_id => $field_map) {
+    $entity_storage = $entity_type_manager->getStorage($entity_type_id);
+
+    // Only SQL storage based entities are supported / throw known exception.
+    //    if (!($entity_storage instanceof SqlContentEntityStorage)) {
+    //      continue;
+    //    }
+
+    $entity_type = $entity_type_manager->getDefinition($entity_type_id);
+    $field_storage_definitions = $entity_field_manager->getFieldStorageDefinitions($entity_type_id);
+    /** @var Drupal\Core\Entity\Sql\DefaultTableMapping $table_mapping */
+    $table_mapping = $entity_storage->getTableMapping($field_storage_definitions);
+    // Only need field storage definitions of address fields.
+    /** @var \Drupal\Core\Field\FieldStorageDefinitionInterface $field_storage_definition */
+    foreach (array_intersect_key($field_storage_definitions, $field_map) as $field_storage_definition) {
+      $field_name = $field_storage_definition->getName();
+      try {
+        $table = $table_mapping->getFieldTableName($field_name);
+      } catch (SqlContentEntityStorageException $e) {
+        // Custom storage? Broken site? No matter what, if there is no table
+        // or column, there's little we can do.
+        continue;
+      }
+      // See if the field has a revision table.
+      $revision_table = NULL;
+      if ($entity_type->isRevisionable() && $field_storage_definition->isRevisionable()) {
+        if ($table_mapping->requiresDedicatedTableStorage($field_storage_definition)) {
+          $revision_table = $table_mapping->getDedicatedRevisionTableName($field_storage_definition);
+        }
+        elseif ($table_mapping->allowsSharedTableStorage($field_storage_definition)) {
+          $revision_table = $entity_type->getRevisionDataTable() ?: $entity_type->getRevisionTable();
+        }
+      }
+      // Load the installed field schema so that it can be updated.
+      $schema_key = "$entity_type_id.field_schema_data.$field_name";
+      $field_schema_data = $entity_storage_schema_sql->get($schema_key);
+
+      $processed_fields[] = [$entity_type_id, $field_name];
+      // Loop over each new column and add it as a schema column change.
+      foreach ($columns_to_remove as $column_id) {
+        $column = $table_mapping->getFieldColumnName($field_storage_definition, $column_id);
+        // Add `initial_from_field` to the new spec, as this will copy over
+        // the entire data.
+        $field_schema = $field_item_class::schema($field_storage_definition);
+        $spec = $field_schema['columns'][$column_id];
+
+        // Add the new column.
+        $schema->dropField($table, $column);
+        if ($revision_table) {
+          $schema->dropField($revision_table, $column);
+        }
+
+        // Remove the column from the installed field schema.
+        if ($field_schema_data) {
+          unset($field_schema_data[$table]['fields'][$column]);
+          $field_schema_data[$table]['fields'][$column]['not null'] = FALSE;
+          if ($revision_table) {
+            unset($field_schema_data[$revision_table]['fields'][$column]);
+          }
+        }
+      }
+
+      // Save changes to the installed field schema.
+      if ($field_schema_data) {
+        $recipient_column = $table_mapping->getFieldColumnName($field_storage_definition, 'recipient');
+        unset($field_schema_data[$table]['fields'][$recipient_column]);
+        if ($revision_table) {
+          unset($field_schema_data[$revision_table]['fields'][$recipient_column]);
+        }
+        $entity_storage_schema_sql->set($schema_key, $field_schema_data);
+      }
+      if ($table_mapping->allowsSharedTableStorage($field_storage_definition)) {
+        $key = "$entity_type_id.field_storage_definitions";
+        if ($definitions = $entity_definitions_installed->get($key)) {
+          $definitions[$field_name] = $field_storage_definition;
+          $entity_definitions_installed->set($key, $definitions);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Reads in new configuration.
+ *
+ * @param string $config_name
+ *   Configuration name.
+ * @param string $bp_path
+ *   Base path.
+ */
+function pizzetta_install_read_in_new_config($config_name, $bp_path) {
+  /** @var \Drupal\Core\Config\StorageInterface $active_storage */
+  $active_storage = \Drupal::service('config.storage');
+  $active_storage->write($config_name, Yaml::parse(file_get_contents($bp_path . '/config/install/' . $config_name . '.yml')));
+}
+
+/**
+ * Updates a configuration from yml file.
+ *
+ * @param string $ymlFileName
+ *   Yml file name (without .yml suffix).
+ * @param array $sets
+ *   An array of what needs to be set.
+ *   - The key will be what we are setting (Can have . in string for array).
+ *   - The value is the key that will be used from the new config file (Can have
+ *     . in string for array).
+ *
+ *   For example if you are updating 'content' with 'content' from the new
+ *   config file, $sets would be ['content' => 'content'].
+ */
+function pizzetta_install_update_configuration_from_yml($ymlFileName, array $sets) {
+  $bp_path = drupal_get_path('module', 'pizzetta');
+  $yml = Yaml::parse(file_get_contents($bp_path . '/config/optional/' . $ymlFileName . '.yml'));
+  $config = \Drupal::configFactory()->getEditable($ymlFileName);
+  foreach ($sets as $key => $value) {
+    $parts = explode('.', $value);
+    if (count($parts) == 1) {
+      $config->set($key, $yml[$value]);
+    }
+    else {
+      $value = NestedArray::getValue($yml, $parts);
+      $config->set($key, $value);
+    }
+  }
+  $config->save(TRUE);
+}
+
+/**
+ * Update entity from yml.
+ *
+ * Some config like form display needs to be updated via config manager.
+ *
+ * @param string $ymlFileName
+ *   Yml file name.
+ * @param string $entityType
+ *   The entity type for this storage.
+ * @param mixed $id
+ *   The ID of the entity to load.
+ * @param array $setComponents
+ *   Array of components you want to add.
+ *   - The key will be what we are setting.
+ *   - The value is the key that will be used from the new config file (Can have
+ *     . in string for array).
+ */
+function pizzetta_install_update_entity_from_yml($ymlFileName, $entityType, $id, array $setComponents) {
+  $bp_path = drupal_get_path('module', 'pizzetta');
+  $yml = Yaml::parse(file_get_contents($bp_path . '/config/optional/' . $ymlFileName . '.yml'));
+
+  $entity = \Drupal::entityTypeManager()
+    ->getStorage($entityType)
+    ->load($id);
+  foreach ($setComponents as $key => $value) {
+    $parts = explode('.', $value);
+    if (count($parts) == 1) {
+      $entity->setComponent($key, $yml[$value]);
+    }
+    else {
+      $value = NestedArray::getValue($yml, $parts);
+      $entity->setComponent($key, $value);
+    }
+  }
+
+  $entity->save();
+}

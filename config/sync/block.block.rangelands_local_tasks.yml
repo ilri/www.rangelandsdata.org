@@ -1,0 +1,22 @@
+uuid: 24800356-2959-48c4-b7b8-95c969f8fb45
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rangelands
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: rangelands_local_tasks
+theme: rangelands
+region: help
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

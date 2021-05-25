@@ -1,0 +1,72 @@
+uuid: 8cf9727b-ef67-49e3-9e90-f28946d8622f
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home
+id: home-layout_builder-0
+label: 'Home layout'
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  uuid: 618d89e0-8e06-47d6-841c-9c75470a0fa7
+  label: null
+  weight: 0
+  sections:
+    -
+      layout_id: layout_onecol
+      layout_settings:
+        label: ''
+      components:
+        d371730c-3534-4dd2-b42b-5e6ac2b3e5b1:
+          uuid: d371730c-3534-4dd2-b42b-5e6ac2b3e5b1
+          region: content
+          configuration:
+            id: 'block_content:bedaf52d-fa05-4a4a-bfca-dc891ff6b603'
+            label: 'hero map'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
+            type: image
+            uuid: bedaf52d-fa05-4a4a-bfca-dc891ff6b603
+          additional: {  }
+          weight: 0
+        100e7835-abae-41f1-8e25-88447883aad8:
+          uuid: 100e7835-abae-41f1-8e25-88447883aad8
+          region: content
+          configuration:
+            id: 'block_content:4fc84206-8eb7-49ea-ae21-203cd5b46ff5'
+            label: 'Home page intro'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
+            type: paragraphs_block
+            uuid: 4fc84206-8eb7-49ea-ae21-203cd5b46ff5
+            context_mapping: {  }
+          additional: {  }
+          weight: 1
+        6699c4b8-9cbb-41e2-948a-386b8af14fb6:
+          uuid: 6699c4b8-9cbb-41e2-948a-386b8af14fb6
+          region: content
+          configuration:
+            id: 'block_content:d0080afd-217e-4e63-ae31-5ee33a2b637e'
+            label: 'Home paragraph block'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
+            type: paragraphs_block
+            uuid: d0080afd-217e-4e63-ae31-5ee33a2b637e
+          additional: {  }
+          weight: 2
+      third_party_settings: {  }
+page: home
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

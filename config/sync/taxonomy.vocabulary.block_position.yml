@@ -1,0 +1,10 @@
+uuid: 943ac050-97a1-4e3f-ab47-6141ed690b0d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QPJGaClvdRGCC0NVR298dH4bEkuf4c71fiADqtAXK9c
+name: 'Block position'
+vid: block_position
+description: ''
+weight: 2

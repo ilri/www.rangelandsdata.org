@@ -1,0 +1,19 @@
+uuid: ec17a29e-f1d3-4c41-aacc-d06d2e1ea4b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.map
+id: paragraph.map.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: map
+label: 'Map Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

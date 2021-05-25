@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pizzetta_settings
+    - paragraphs.paragraphs_type.pzt_layout
+  module:
+    - pizzetta
+id: paragraph.pzt_layout.field_pizzetta_settings
+field_name: field_pizzetta_settings
+entity_type: paragraph
+bundle: pzt_layout
+label: Settings
+description: ''
+required: false
+translatable: true
+default_value_callback: ''
+settings: {  }
+field_type: pizzetta_settings

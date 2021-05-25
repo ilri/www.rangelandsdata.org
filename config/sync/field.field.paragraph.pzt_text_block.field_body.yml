@@ -1,0 +1,23 @@
+uuid: 75f4ca02-8ee7-4318-b3c2-150323aff2bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.pzt_text_block
+  module:
+    - text
+_core:
+  default_config_hash: '-2kCJtlL_kUt1hrpl1A8yaZLYLyz7t7Vvbe3nLAgvHc'
+id: paragraph.pzt_text_block.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: pzt_text_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_negative_text
+    - taxonomy.vocabulary.colors
+id: taxonomy_term.colors.field_negative_text
+field_name: field_negative_text
+entity_type: taxonomy_term
+bundle: colors
+label: 'Negative text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

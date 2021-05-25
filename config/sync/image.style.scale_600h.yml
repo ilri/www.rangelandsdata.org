@@ -1,0 +1,15 @@
+uuid: 978ac4c1-b0b7-4458-b833-5c5e0ec59023
+langcode: en
+status: true
+dependencies: {  }
+name: scale_600h
+label: scale_600h
+effects:
+  bf094205-f242-4fef-a6a9-969581d7156f:
+    uuid: bf094205-f242-4fef-a6a9-969581d7156f
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 600
+      upscale: false

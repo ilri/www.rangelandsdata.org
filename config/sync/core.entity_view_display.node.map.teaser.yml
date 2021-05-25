@@ -1,0 +1,36 @@
+uuid: 95b8f808-f0e9-49d4-8be9-fb62cf7a29f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.map.field_body
+    - field.field.node.map.field_header_image
+    - field.field.node.map.field_maps
+    - field.field.node.map.field_metatags
+    - field.field.node.map.field_related_content
+    - image.style.scale_450w
+    - node.type.map
+  module:
+    - media
+    - user
+id: node.map.teaser
+targetEntityType: node
+bundle: map
+mode: teaser
+content:
+  field_header_image:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: scale_450w
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  field_body: true
+  field_maps: true
+  field_metatags: true
+  field_related_content: true
+  links: true

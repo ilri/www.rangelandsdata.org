@@ -1,0 +1,29 @@
+pizzetta_layout_onecol:
+  label: 'One column'
+  path: layouts/onecol
+  template: pizzetta--layout--onecol
+  category: 'Custom Layouts'
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  library: pizzetta_layout/onecol_section
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+pizzetta_layout_twocol:
+  label: 'Two columns'
+  path: layouts/twocol
+  template: pizzetta--layout--twocol
+  category: 'Custom Layouts'
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  library: pizzetta_layout/twocol_section
+  default_region: first
+  icon_map:
+    - [ first, second ]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second

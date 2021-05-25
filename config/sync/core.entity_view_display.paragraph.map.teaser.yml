@@ -1,0 +1,39 @@
+uuid: 5b3f2477-e54e-4ceb-8c57-5a54cdff5f94
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.map.field_body
+    - field.field.paragraph.map.field_legend
+    - field.field.paragraph.map.field_legend_size
+    - field.field.paragraph.map.field_map
+    - field.field.paragraph.map.field_title
+    - image.style.map_thumbnail
+    - paragraphs.paragraphs_type.map
+  module:
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.map.teaser
+targetEntityType: paragraph
+bundle: map
+mode: teaser
+content:
+  field_map:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: map_thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_body: true
+  field_legend: true
+  field_legend_size: true
+  field_title: true

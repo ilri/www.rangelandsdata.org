@@ -1,0 +1,12 @@
+uuid: 449d3fbf-01ff-4df9-ba13-0244539443c2
+langcode: en
+status: true
+dependencies: {  }
+id: 600x400
+label: 600x400
+description: ''
+aspect_ratio: '3:2'
+soft_limit_width: 600
+soft_limit_height: 400
+hard_limit_width: null
+hard_limit_height: null

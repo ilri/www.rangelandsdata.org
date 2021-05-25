@@ -1,0 +1,43 @@
+uuid: c4691578-0369-45b2-8e68-bc0d5676a5c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.text_alignment.field_css_class
+    - field.field.taxonomy_term.text_alignment.field_icon
+    - taxonomy.vocabulary.text_alignment
+  module:
+    - text
+_core:
+  default_config_hash: nB6Y7LdP0FPlykafEFjXdUQPtKpQIu9jm9s15UUhEnc
+id: taxonomy_term.text_alignment.default
+targetEntityType: taxonomy_term
+bundle: text_alignment
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_css_class:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

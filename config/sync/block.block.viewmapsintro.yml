@@ -1,0 +1,30 @@
+uuid: 8e2c54f8-dde7-4857-9c47-0036477c0212
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:paragraphs_block:65c97d68-46e8-42ff-94cc-b31e1e2820a9'
+  module:
+    - block_content
+    - system
+  theme:
+    - rangelands
+id: viewmapsintro
+theme: rangelands
+region: content_top
+weight: 0
+provider: null
+plugin: 'block_content:65c97d68-46e8-42ff-94cc-b31e1e2820a9'
+settings:
+  id: 'block_content:65c97d68-46e8-42ff-94cc-b31e1e2820a9'
+  label: 'View maps intro'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /maps
+    negate: false

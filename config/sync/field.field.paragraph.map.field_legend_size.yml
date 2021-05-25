@@ -1,0 +1,23 @@
+uuid: 3ad38e2a-67cf-48c6-8878-1bd3f353e228
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_legend_size
+    - paragraphs.paragraphs_type.map
+  module:
+    - options
+id: paragraph.map.field_legend_size
+field_name: field_legend_size
+entity_type: paragraph
+bundle: map
+label: 'Legend size'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

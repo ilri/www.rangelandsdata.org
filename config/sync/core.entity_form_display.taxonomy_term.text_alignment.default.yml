@@ -1,0 +1,64 @@
+uuid: 24fd4fa1-8114-43a5-9235-f7841239d5fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.text_alignment.field_css_class
+    - field.field.taxonomy_term.text_alignment.field_icon
+    - taxonomy.vocabulary.text_alignment
+  module:
+    - media_library
+    - path
+    - text
+_core:
+  default_config_hash: KB05h51_3zMIIQYnPCGox1AM3LlBdMMQMltBgsgVdvA
+id: taxonomy_term.text_alignment.default
+targetEntityType: taxonomy_term
+bundle: text_alignment
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_css_class:
+    weight: 1
+    settings:
+      size: 15
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_icon:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+hidden: {  }

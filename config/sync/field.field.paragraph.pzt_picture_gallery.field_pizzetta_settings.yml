@@ -1,0 +1,42 @@
+uuid: 6a8ee57c-bfaa-49d5-a821-5441619f990b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pizzetta_settings
+    - paragraphs.paragraphs_type.pzt_picture_gallery
+  module:
+    - pizzetta
+_core:
+  default_config_hash: ByGOvI-rg0JZABJi9gBEEekFCU6GpDL5KqNU2KTV5jc
+id: paragraph.pzt_picture_gallery.field_pizzetta_settings
+field_name: field_pizzetta_settings
+entity_type: paragraph
+bundle: pzt_picture_gallery
+label: Settings
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_value_input__field_pizzetta_settings__0__pizzetta_settings__active_tab: edit-default-value-input-field-pizzetta-settings-0-pizzetta-settings-title-settings
+    title: ''
+    hide_title: 0
+    title_level: h2
+    show_title_in_side_menu: 0
+    block_position: 0
+    negative: 0
+    internal_padding_top: ''
+    internal_padding_right: ''
+    internal_padding_bottom: ''
+    internal_padding_left: ''
+    margin_top: ''
+    margin_right: ''
+    margin_bottom: ''
+    margin_left: ''
+    background_color: 0
+    background_image_opacity: 0
+    background_image: null
+default_value_callback: ''
+settings: {  }
+field_type: pizzetta_settings
