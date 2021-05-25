@@ -103,7 +103,7 @@
   {% endif %}
   {% if node.field_body.0  %}
   <div class="case-study--body">
-  {{ content|without('field_header_image') }}
+  {{ content|without('field_header_image', 'field_country') }}
   </div>
   {% endif %}
 </article>
