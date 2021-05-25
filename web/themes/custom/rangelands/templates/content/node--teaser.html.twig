@@ -9,10 +9,9 @@
 <article{{ attributes.addClass(classes) }}>
   <a href="{{ url}}" class="cover-link"></a>
   <div class="content">
-    {% if node.field_thumbnail.0 %}
-      {% set image = node.field_thumbnail.0.entity.uri.value | image_style('scale_600w') %}
-    {% elseif node.field_header_image.0 %}
-      {% set image = node.field_header_image.0.entity.field_media_image.entity.uri.value | image_style('scale_600x400') %}
+    {% if node.field_header_image.0 %}
+      {% set preset = node.bundle == 'map' ? 'scale_600w':'scale_600x400' %}
+      {% set image = node.field_header_image.0.entity.field_media_image.entity.uri.value | image_style(preset) %}
     {% elseif node.field_maps.0 %}
       {% set image = node.field_maps.0.entity.field_map.entity.field_media_image.entity.uri.value | image_style('map_thumbnail') %}
     {% endif %}
