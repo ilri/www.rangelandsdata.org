@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.field_body
+    - field.field.node.article.field_country
     - field.field.node.article.field_header_image
     - field.field.node.article.field_metatags
     - node.type.article
@@ -18,9 +19,17 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
+  field_country:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
   field_header_image:
     type: media_thumbnail
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:

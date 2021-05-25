@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.article.field_body
+    - field.field.node.article.field_country
     - field.field.node.article.field_header_image
     - field.field.node.article.field_metatags
     - image.style.scale_1920
@@ -29,6 +30,14 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_country:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_header_image:
     type: media_thumbnail
     weight: 0
@@ -40,7 +49,7 @@ content:
     region: content
   field_metatags:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter

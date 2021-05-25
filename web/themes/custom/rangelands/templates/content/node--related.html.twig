@@ -82,6 +82,9 @@
 <article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   <div class="case-study--heading">
+    {% if content.field_country.0 %}
+      <div class="case-study--countries">{{ content.field_country }}</div>
+    {% endif %}
     <h2{{ title_attributes }}>
       {{ label }}
     </h2>

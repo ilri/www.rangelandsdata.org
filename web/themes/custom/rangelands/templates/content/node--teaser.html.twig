@@ -18,6 +18,9 @@
     {% if image %}
       <img src="{{ image }}">
     {%  endif %}
+    {% if content.field_country.0 %}
+      <div class="case-study--countries">{{ content.field_country }}</div>
+    {% endif %}
     {% if label %}
       <h3{{ title_attributes }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>

@@ -26,5 +26,9 @@
  */
 #}
 {% block content %}
-  {{ content }}
+  <div class="block--paragraphs boxed contextual-region">
+      {% set id = content['#block_content'].id.value %}
+      {{ drupal_contextual_links('block_content:block_content='~ id) }}
+      {{ content }}
+  </div>
 {% endblock %}

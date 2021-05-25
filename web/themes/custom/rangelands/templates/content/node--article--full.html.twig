@@ -88,6 +88,9 @@
 {% endblock %}
 {% block title %}
   <div class="case-study--heading">
+    {% if content.field_country.0 %}
+      <div class="case-study--countries">{{ content.field_country }}</div>
+    {% endif %}
     <h2{{ title_attributes }}>
       {{ label }}
     </h2>
@@ -99,7 +102,7 @@
     <div class="case-study--body contextual-region">
       {{ title_prefix }}
       {{ title_suffix }}
-      {{ content|without('field_header_image') }}
+      {{ content|without('field_header_image', 'field_country') }}
     </div>
   {% endif %}
 {% endblock %}

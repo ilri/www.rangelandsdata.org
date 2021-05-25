@@ -255,6 +255,27 @@ taxonomies:
           value: '0'
 blocks:
   -
+    info: 'View case study intro'
+    langcode: en
+    uuid: 78d955f7-e708-4e2b-8081-56de821ea762
+    bundle: paragraphs_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_body: {  }
+  -
+    info: 'View maps intro'
+    langcode: en
+    uuid: 65c97d68-46e8-42ff-94cc-b31e1e2820a9
+    bundle: paragraphs_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_body:
+        -
+          target_id: '72'
+          target_revision_id: '72'
+  -
     info: 'Home paragraph block'
     langcode: en
     uuid: d0080afd-217e-4e63-ae31-5ee33a2b637e
@@ -262,10 +283,7 @@ blocks:
     revision_id: null
     rev_id_current: null
     fields:
-      field_body:
-        -
-          target_id: '71'
-          target_revision_id: '71'
+      field_body: {  }
   -
     info: 'Footer block'
     langcode: en
