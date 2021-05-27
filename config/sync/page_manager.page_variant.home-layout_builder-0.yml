@@ -49,21 +49,6 @@ variant_settings:
             context_mapping: {  }
           additional: {  }
           weight: 1
-        6699c4b8-9cbb-41e2-948a-386b8af14fb6:
-          uuid: 6699c4b8-9cbb-41e2-948a-386b8af14fb6
-          region: content
-          configuration:
-            id: 'block_content:d0080afd-217e-4e63-ae31-5ee33a2b637e'
-            label: 'Home paragraph block'
-            provider: block_content
-            label_display: '0'
-            status: true
-            info: ''
-            view_mode: full
-            type: paragraphs_block
-            uuid: d0080afd-217e-4e63-ae31-5ee33a2b637e
-          additional: {  }
-          weight: 2
       third_party_settings: {  }
 page: home
 weight: 0
