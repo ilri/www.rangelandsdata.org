@@ -1,5 +1,9 @@
 <?php
 
+function rangelands_preprocess_html(&$variables){
+    $variables['base_path'] = $GLOBALS['base_path'];
+}
+
 function rangelands_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook){
 
   $element = $variables["elements"];
