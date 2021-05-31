@@ -1,10 +1,12 @@
 style:
   css:
     theme:
-      'https://stove.fabiofidanza.com/rangelands-atlas/concept/stylesheets/style.css': { type: external }
+#      'https://stove.fabiofidanza.com/rangelands-atlas/concept/stylesheets/style.css': { type: external }
+      stylesheets/style.css: {}
   js:
     js/panzoom.min.js: {}
-    'https://stove.fabiofidanza.com/rangelands-atlas/concept/js/app.js': { type: external }
+    js/app.js: {}
+#    'https://stove.fabiofidanza.com/rangelands-atlas/concept/js/app.js': { type: external }
   dependencies:
     - core/jquery
     - core/drupal

@@ -123,84 +123,132 @@ jQuery(document).ready( function($) {
 	}
 
 	pizzettaApp.automateMaps = function() {
-/*
-		panzoom($('.map').get(0),  
-		{
-			maxZoom: 8,
-			minZoom: 1,
-			bounds: true,
-			boundsPadding: 0.9
-		}
-	);
-*/	
-		let map = $('.map').get(0);
 
-		let panzoom = Panzoom(map, { contain: 'outside', startScale: 1 });
+		let $maps = $('.map--container');
 
-		var parent = map.parentElement;
+		$maps.each( function() {
 
-		parent.addEventListener('wheel', function(event) {
-			event.stopPropagation();
-			return panzoom.zoomWithWheel(event);
+			let $map_container = $(this);
 
-		  })
+			let map = $map_container.find('.map').get(0);
 
-		let $zoomInButton = $('.map--action-zoom-in');
-		$zoomInButton.on('click', function() {
+			let panzoom = Panzoom(map, { contain: 'outside', startScale: 1,  maxScale: 3 });
 
-			panzoom.zoomIn();
-			return false;
+			var parent = map.parentElement.parentElement;
 
-		})
+			parent.addEventListener('wheel', function(event) {
+				event.stopPropagation();
+				return panzoom.zoomWithWheel(event);
 
-		let $zoomOutButton = $('.map--action-zoom-out');
-		$zoomOutButton.on('click', function() {
+			})
 
-			panzoom.zoomOut();
-			return false;
+			let $zoomInButton = $map_container.find('.map--action-zoom-in');
+			$zoomInButton.on('click', function() {
 
-		})
+				panzoom.zoomIn();
+				return false;
 
-		let $fullScreenButton = $('.map--action-full-screen');
-		let $exitFullScreenButton = $('.map--action-exit-full-screen');
+			})
 
-		$exitFullScreenButton.hide();
+			let $zoomOutButton = $map_container.find('.map--action-zoom-out');
+			$zoomOutButton.on('click', function() {
 
-		$fullScreenButton.on('click', function() {
-			
-			parent.requestFullscreen().then( () => {
-				panzoom.zoom(1);
-				$exitFullScreenButton.show();
-				$fullScreenButton.hide();
-			}
+				panzoom.zoomOut();
+				return false;
+
+			})
+
+			let $legend = $map_container.find('.map--legend');
+
+			let $collapseLegendButton = $map_container.find('.map--legend--action--collapse');
+			let $expandLegendButton = $map_container.find('.map--legend--action--expand');
+
+			$collapseLegendButton.on('click', function() {
+
+				$collapseLegendButton.hide();
+				$expandLegendButton.show();
+				$legend.addClass('collapsed');
 				
-			)
+				return false;
 
-			return false;
+			})
 
-		})
-
-		$exitFullScreenButton.on('click', function() {
 			
-			document.exitFullscreen().then( () => {
-				panzoom.zoom(1);
+			$expandLegendButton.on('click', function() {
+
+				$expandLegendButton.hide();
+				$collapseLegendButton.show();
+				$legend.removeClass('collapsed');
+				return false;
+
+			})
+
+			$expandLegendButton.hide();
+
+			let $fullScreenButton = $map_container.find('.map--action-full-screen');
+			let $exitFullScreenButton = $map_container.find('.map--action-exit-full-screen');
+
+			if (parent.requestFullscreen) {
+				
+	
 				$exitFullScreenButton.hide();
-				$fullScreenButton.show();
-			}
-				
-			)
+	
+				$fullScreenButton.on('click', function() {
+					
+					parent.requestFullscreen().then( () => {
+						panzoom.zoom(1);
+						$exitFullScreenButton.show();
+						$fullScreenButton.hide();
+					}
+						
+					)
+	
+					return false;
+	
+				})
+	
+				$exitFullScreenButton.on('click', function() {
+					
+					document.exitFullscreen().then( () => {
+						panzoom.zoom(1);
+						$exitFullScreenButton.hide();
+						$fullScreenButton.show();
+					}
+						
+					)
+	
+					return false;
+	
+				})
+	
+			} else {
 
-			return false;
+				$fullScreenButton.hide();
+				$exitFullScreenButton.hide();
+
+			}
+
+						
+			panzoom.zoom(1);
+			
+			
 
 		})
 
-		setTimeout(() => panzoom.zoom(1),500);
+		
 
 	}
 
 	pizzettaApp.init = function() {
 
-		pizzettaApp.automateMaps();
+		if ( document.readyState === 'complete'  ) {
+			pizzettaApp.automateMaps();
+		} else {
+			$(window).on('load',pizzettaApp.automateMaps);
+		}
+		
+		
+		
 		
 	}
 
