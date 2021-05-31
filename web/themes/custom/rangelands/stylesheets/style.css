@@ -1,30 +1,3 @@
-@charset "UTF-8";
-@import url("font/flaticon.css");
-/* typography measures */
-/* text sizes */
-/* radiuses */
-/* icons */
-/* animation stuff */
-/* block sizes */
-/* forms */
-/* opacity */
-/* the website's header take the height from the logo  */
-/* cards */
-/* that blue
- * saturino arancino #f5500f
- */
-/*
- * colors
- */
-/* overlays */
-/* borders */
-/* forms */
-/* block backgrounds */
-/* wireframe */
-/* shadows */
-/* Hamburger Menu */
-/* color classes */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .color-primary {
   color: #a3a84d;
 }
