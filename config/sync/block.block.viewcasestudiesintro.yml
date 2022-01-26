@@ -18,13 +18,13 @@ plugin: 'block_content:78d955f7-e708-4e2b-8081-56de821ea762'
 settings:
   id: 'block_content:78d955f7-e708-4e2b-8081-56de821ea762'
   label: 'View case studies intro'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /case-studies
     negate: false
+    pages: /case-studies

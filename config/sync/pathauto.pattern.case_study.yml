@@ -11,12 +11,12 @@ pattern: 'case-studies/[node:title]'
 selection_criteria:
   ee746ef0-9884-4fd6-9930-681166aaa755:
     id: node_type
-    bundles:
-      article: article
     negate: false
+    uuid: ee746ef0-9884-4fd6-9930-681166aaa755
     context_mapping:
       node: node
-    uuid: ee746ef0-9884-4fd6-9930-681166aaa755
+    bundles:
+      article: article
 selection_logic: and
 weight: -5
 relationships: {  }

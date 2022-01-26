@@ -14,17 +14,17 @@ bundle: maps
 mode: default
 content:
   field_media_image:
+    type: image
     label: visually_hidden
-    weight: 0
     settings:
-      image_style: map_large
       image_link: ''
-      svg_render_as_image: true
+      image_style: map_large
       svg_attributes:
         width: null
         height: null
+      svg_render_as_image: true
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
 hidden:
   created: true

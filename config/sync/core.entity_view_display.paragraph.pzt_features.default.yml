@@ -20,48 +20,48 @@ bundle: pzt_features
 mode: default
 content:
   field_animate_decimals:
-    weight: 3
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 3
     region: content
   field_animate_values:
-    weight: 2
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 2
     region: content
   field_feature:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   field_pizzetta_settings:
-    weight: 0
+    type: pizzetta_settings_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: pizzetta_settings_formatter
+    weight: 0
     region: content
   field_title:
-    weight: 4
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
 hidden:
   search_api_excerpt: true

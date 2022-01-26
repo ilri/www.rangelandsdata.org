@@ -29,13 +29,13 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       pzt_downloads: pzt_downloads
       pzt_picture: pzt_picture
       pzt_picture_gallery: pzt_picture_gallery
       pzt_text_block: pzt_text_block
       pzt_video: pzt_video
+    negate: 0
     target_bundles_drag_drop:
       feature:
         weight: 13
@@ -47,8 +47,8 @@ settings:
         weight: 15
         enabled: false
       pzt_downloads:
-        enabled: true
         weight: 16
+        enabled: true
       pzt_features:
         weight: 17
         enabled: false
@@ -59,18 +59,18 @@ settings:
         weight: 19
         enabled: false
       pzt_picture:
-        enabled: true
         weight: 20
-      pzt_picture_gallery:
         enabled: true
+      pzt_picture_gallery:
         weight: 21
+        enabled: true
       pzt_terms:
         weight: 22
         enabled: false
       pzt_text_block:
-        enabled: true
         weight: 23
-      pzt_video:
         enabled: true
+      pzt_video:
         weight: 24
+        enabled: true
 field_type: entity_reference_revisions

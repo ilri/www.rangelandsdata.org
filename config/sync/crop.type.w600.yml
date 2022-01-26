@@ -2,8 +2,8 @@ uuid: 846dadd1-1e75-4739-ad3a-4cc8c28b83b3
 langcode: en
 status: true
 dependencies: {  }
-id: w600
 label: w600
+id: w600
 description: ''
 aspect_ratio: ''
 soft_limit_width: 600

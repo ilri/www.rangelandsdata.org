@@ -21,38 +21,38 @@ bundle: pzt_terms
 mode: default
 content:
   field_articles_per_row:
-    weight: 0
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 0
     region: content
   field_pizzetta_settings:
-    weight: 1
+    type: pizzetta_settings_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: pizzetta_settings_formatter
+    weight: 1
     region: content
   field_terms:
-    weight: 4
+    type: entity_reference_entity_view
     label: above
     settings:
       view_mode: teaser
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 4
     region: content
   field_title:
-    weight: 5
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
   field_view_more:
-    weight: 2
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -61,7 +61,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: content
 hidden:
   search_api_excerpt: true

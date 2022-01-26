@@ -18,13 +18,13 @@ plugin: 'block_content:65c97d68-46e8-42ff-94cc-b31e1e2820a9'
 settings:
   id: 'block_content:65c97d68-46e8-42ff-94cc-b31e1e2820a9'
   label: 'View maps intro'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /maps
     negate: false
+    pages: /maps

@@ -46,9 +46,9 @@ settings:
       ckeditor_acr_config: 'span[!class]{*}(*)'
     codemirror:
       enable: true
-      startupMode: wysiwyg
       mode: htmlmixed
       theme: default
+      startupMode: wysiwyg
       options:
         lineNumbers: true
         lineWrapping: true

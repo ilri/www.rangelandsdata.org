@@ -6,12 +6,13 @@ dependencies:
     - page_manager.page.home
 id: home-layout_builder-0
 label: 'Home layout'
+weight: 0
 variant: layout_builder
 variant_settings:
   id: layout_builder
-  uuid: 618d89e0-8e06-47d6-841c-9c75470a0fa7
   label: null
   weight: 0
+  uuid: 618d89e0-8e06-47d6-841c-9c75470a0fa7
   sections:
     -
       layout_id: layout_onecol
@@ -24,34 +25,33 @@ variant_settings:
           configuration:
             id: 'block_content:bedaf52d-fa05-4a4a-bfca-dc891ff6b603'
             label: 'hero map'
-            provider: block_content
             label_display: '0'
+            provider: block_content
             status: true
             info: ''
             view_mode: full
             type: image
             uuid: bedaf52d-fa05-4a4a-bfca-dc891ff6b603
-          additional: {  }
           weight: 0
+          additional: {  }
         100e7835-abae-41f1-8e25-88447883aad8:
           uuid: 100e7835-abae-41f1-8e25-88447883aad8
           region: content
           configuration:
             id: 'block_content:4fc84206-8eb7-49ea-ae21-203cd5b46ff5'
             label: 'Home page intro'
-            provider: block_content
             label_display: '0'
+            provider: block_content
             status: true
             info: ''
             view_mode: full
+            context_mapping: {  }
             type: paragraphs_block
             uuid: 4fc84206-8eb7-49ea-ae21-203cd5b46ff5
-            context_mapping: {  }
-          additional: {  }
           weight: 1
+          additional: {  }
       third_party_settings: {  }
 page: home
-weight: 0
 selection_criteria: {  }
 selection_logic: and
 static_context: {  }

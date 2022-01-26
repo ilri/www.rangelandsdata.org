@@ -60,9 +60,9 @@ settings:
       ckeditor_acr_config: ''
     codemirror:
       enable: true
-      startupMode: wysiwyg
       mode: htmlmixed
       theme: default
+      startupMode: wysiwyg
       options:
         lineNumbers: true
         lineWrapping: true
