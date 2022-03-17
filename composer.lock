@@ -1799,8 +1799,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector",
-                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
+                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector",
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3327,16 +3327,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.3.3",
+            "version": "9.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "a9bd68be9a4e39724ea555f8040114759a8faf7f"
+                "reference": "e8e3b7e5b3353f7ebf24de9d39087df75bd66afe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/a9bd68be9a4e39724ea555f8040114759a8faf7f",
-                "reference": "a9bd68be9a4e39724ea555f8040114759a8faf7f",
+                "url": "https://api.github.com/repos/drupal/core/zipball/e8e3b7e5b3353f7ebf24de9d39087df75bd66afe",
+                "reference": "e8e3b7e5b3353f7ebf24de9d39087df75bd66afe",
                 "shasum": ""
             },
             "require": {
@@ -3534,10 +3534,14 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "includes/bootstrap.inc",
+                    "includes/guzzle_php81_shim.php"
+                ],
                 "psr-4": {
                     "Drupal\\Core\\": "lib/Drupal/Core",
-                    "Drupal\\Component\\": "lib/Drupal/Component",
-                    "Drupal\\Driver\\": "../drivers/lib/Drupal/Driver"
+                    "Drupal\\Driver\\": "../drivers/lib/Drupal/Driver",
+                    "Drupal\\Component\\": "lib/Drupal/Component"
                 },
                 "classmap": [
                     "lib/Drupal.php",
@@ -3566,10 +3570,6 @@
                     "lib/Drupal/Core/Http/InputBag.php",
                     "lib/Drupal/Core/Installer/InstallerRedirectTrait.php",
                     "lib/Drupal/Core/Site/Settings.php"
-                ],
-                "files": [
-                    "includes/bootstrap.inc",
-                    "includes/guzzle_php81_shim.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3578,22 +3578,22 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.3.3"
+                "source": "https://github.com/drupal/core/tree/9.3.8"
             },
-            "time": "2022-01-19T00:13:54+00:00"
+            "time": "2022-03-16T15:34:53+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.3.3",
+            "version": "9.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "d3e0b1d707125c5de0f54315906e65654c3608da"
+                "reference": "a9dd9def8891e1c388719474720b57d3fe929a2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/d3e0b1d707125c5de0f54315906e65654c3608da",
-                "reference": "d3e0b1d707125c5de0f54315906e65654c3608da",
+                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/a9dd9def8891e1c388719474720b57d3fe929a2f",
+                "reference": "a9dd9def8891e1c388719474720b57d3fe929a2f",
                 "shasum": ""
             },
             "require": {
@@ -3628,22 +3628,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.3.3"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.3.8"
             },
-            "time": "2021-11-19T09:52:23+00:00"
+            "time": "2022-02-24T17:40:56+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.3.3",
+            "version": "9.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
-                "reference": "812d6da43dd49cc210af62e80fa92189e68e565a"
+                "reference": "69664743736977676e11f824301ea3e925a712fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/812d6da43dd49cc210af62e80fa92189e68e565a",
-                "reference": "812d6da43dd49cc210af62e80fa92189e68e565a",
+                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/69664743736977676e11f824301ea3e925a712fc",
+                "reference": "69664743736977676e11f824301ea3e925a712fc",
                 "shasum": ""
             },
             "require": {
@@ -3669,22 +3669,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.3.3"
+                "source": "https://github.com/drupal/core-project-message/tree/9.3.8"
             },
-            "time": "2020-09-14T13:40:36+00:00"
+            "time": "2022-02-24T17:40:56+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.3.3",
+            "version": "9.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "a2fc42cb765874e5393d203ee807ac57abe04b12"
+                "reference": "98048032809157c723131ecc2394ff55421d5dc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/a2fc42cb765874e5393d203ee807ac57abe04b12",
-                "reference": "a2fc42cb765874e5393d203ee807ac57abe04b12",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/98048032809157c723131ecc2394ff55421d5dc6",
+                "reference": "98048032809157c723131ecc2394ff55421d5dc6",
                 "shasum": ""
             },
             "require": {
@@ -3693,7 +3693,7 @@
                 "doctrine/annotations": "1.13.2",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.3.3",
+                "drupal/core": "9.3.8",
                 "egulias/email-validator": "3.1.2",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.5.1",
@@ -3742,7 +3742,7 @@
                 "symfony/validator": "v4.4.35",
                 "symfony/var-dumper": "v5.4.0",
                 "symfony/yaml": "v4.4.34",
-                "twig/twig": "v2.14.7",
+                "twig/twig": "v2.14.11",
                 "typo3/phar-stream-wrapper": "v3.1.7"
             },
             "conflict": {
@@ -3755,9 +3755,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.3.3"
+                "source": "https://github.com/drupal/core-recommended/tree/9.3.8"
             },
-            "time": "2022-01-19T00:13:54+00:00"
+            "time": "2022-03-16T15:34:53+00:00"
         },
         {
             "name": "drupal/crop",
@@ -7652,12 +7652,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -7714,12 +7714,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -7807,12 +7807,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -10766,12 +10766,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -10845,12 +10845,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Iconv\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Iconv\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -10927,12 +10927,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -11012,12 +11012,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -11096,12 +11096,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -11147,7 +11147,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -11173,12 +11173,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -11203,7 +11203,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -11223,7 +11223,7 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -11249,12 +11249,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -11282,7 +11282,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -11328,12 +11328,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -12234,22 +12234,23 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.14.7",
+            "version": "v2.14.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "8e202327ee1ed863629de9b18a5ec70ac614d88f"
+                "reference": "66baa66f29ee30e487e05f1679903e36eb01d727"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/8e202327ee1ed863629de9b18a5ec70ac614d88f",
-                "reference": "8e202327ee1ed863629de9b18a5ec70ac614d88f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/66baa66f29ee30e487e05f1679903e36eb01d727",
+                "reference": "66baa66f29ee30e487e05f1679903e36eb01d727",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
+                "php": ">=7.1.3",
                 "symfony/polyfill-ctype": "^1.8",
-                "symfony/polyfill-mbstring": "^1.3"
+                "symfony/polyfill-mbstring": "^1.3",
+                "symfony/polyfill-php72": "^1.8"
             },
             "require-dev": {
                 "psr/container": "^1.0",
@@ -12297,7 +12298,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v2.14.7"
+                "source": "https://github.com/twigphp/Twig/tree/v2.14.11"
             },
             "funding": [
                 {
@@ -12309,7 +12310,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-17T08:39:54+00:00"
+            "time": "2022-02-04T06:57:25+00:00"
         },
         {
             "name": "typo3/phar-stream-wrapper",
@@ -12606,5 +12607,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
