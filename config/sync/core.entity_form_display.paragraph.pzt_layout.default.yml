@@ -15,12 +15,12 @@ bundle: pzt_layout
 mode: default
 content:
   field_pizzetta_settings:
+    type: pizzetta_settings_widget
     weight: 0
+    region: content
     settings:
       open: false
     third_party_settings: {  }
-    type: pizzetta_settings_widget
-    region: content
 hidden:
   created: true
   status: true

@@ -1,7 +1,32 @@
 uuid: 1f8c17c8-de4a-4e32-a8d8-75cdbfa274e0
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - media.type.image
+    - media.type.legends
+    - media.type.maps
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.map
+  module:
+    - block_content_permissions
+    - contextual
+    - dropzonejs
+    - file
+    - file_delete
+    - filter
+    - media
+    - node
+    - override_node_options
+    - paragraphs
+    - quickedit
+    - system
+    - toolbar
+    - view_unpublished
 id: editor
 label: Editor
 weight: 3

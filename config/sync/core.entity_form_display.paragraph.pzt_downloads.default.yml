@@ -20,17 +20,17 @@ content:
   field_downloads:
     type: media_library_widget
     weight: 2
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_pizzetta_settings:
+    type: pizzetta_settings_widget
     weight: 0
+    region: content
     settings:
       open: false
     third_party_settings: {  }
-    type: pizzetta_settings_widget
-    region: content
   field_title:
     type: string_textfield
     weight: 1

@@ -11,12 +11,12 @@ pattern: 'maps/[node:title]'
 selection_criteria:
   3add37fc-3786-435c-b2f2-e8290e2a7b65:
     id: node_type
-    bundles:
-      map: map
     negate: false
+    uuid: 3add37fc-3786-435c-b2f2-e8290e2a7b65
     context_mapping:
       node: node
-    uuid: 3add37fc-3786-435c-b2f2-e8290e2a7b65
+    bundles:
+      map: map
 selection_logic: and
 weight: -5
 relationships: {  }

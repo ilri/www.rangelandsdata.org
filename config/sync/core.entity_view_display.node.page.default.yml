@@ -20,29 +20,29 @@ bundle: page
 mode: default
 content:
   field_body:
-    weight: 1
+    type: layout_paragraphs
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: layout_paragraphs
+    weight: 1
     region: content
   field_header_image:
-    weight: 0
+    type: media_thumbnail
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: media_thumbnail
+    weight: 0
     region: content
   field_metatags:
-    weight: 2
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 2
     region: content
 hidden:
   links: true

@@ -2,8 +2,8 @@ uuid: 7c5932a1-623d-4d41-b92f-600acc4efab1
 langcode: en
 status: true
 dependencies: {  }
-id: map_large
 label: 'map large'
+id: map_large
 description: ''
 aspect_ratio: ''
 soft_limit_width: 2500

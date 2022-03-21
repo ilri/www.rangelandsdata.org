@@ -2,8 +2,8 @@ uuid: eaaa8bf8-6f55-44d6-bf02-60451fc80022
 langcode: en
 status: true
 dependencies: {  }
-id: legend
 label: legend
+id: legend
 description: ''
 aspect_ratio: ''
 soft_limit_width: 800

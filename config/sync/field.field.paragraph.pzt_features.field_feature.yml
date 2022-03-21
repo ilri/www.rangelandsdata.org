@@ -27,13 +27,13 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       feature: feature
+    negate: 0
     target_bundles_drag_drop:
       feature:
-        enabled: true
         weight: 9
+        enabled: true
       layout:
         weight: 10
         enabled: false

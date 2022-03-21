@@ -21,13 +21,13 @@ mode: teaser
 content:
   field_header_image:
     type: media_thumbnail
-    weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: scale_450w
       image_link: ''
+      image_style: scale_450w
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_body: true
   field_maps: true
