@@ -13,9 +13,6 @@
     },
     "drupal/simple_sitemap": {
       "Exclude duplicate Links should keep the highest priority entry": "https://www.drupal.org/files/issues/2020-06-20/3022731_8_merge_duplicates_to_highest_priority.patch"
-    },
-    "drupal/dropzonejs": {
-      "Make dropzonejs widget available to the new Media Library in core": "https://www.drupal.org/files/issues/2021-03-18/3051658-27.patch"
     }
   }
 }
